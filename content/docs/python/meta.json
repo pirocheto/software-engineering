@@ -1,0 +1,7 @@
+{
+  "title": "Python",
+  "description": "Langage de programmation",
+  "icon": "FaPython",
+  "root": true,
+  "pages": ["intro"]
+}

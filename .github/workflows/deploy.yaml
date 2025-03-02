@@ -18,6 +18,8 @@ jobs:
         run: npm install
 
       - name: Build
+        env:
+          BASE_PATH: /data-engineering
         run: |
           npm run build
           touch ./out/.nojekyll

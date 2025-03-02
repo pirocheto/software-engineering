@@ -36,7 +36,7 @@ export const baseOptions: BaseLayoutProps = {
   links: [
     {
       text: "Cours",
-      url: "/docs/data",
+      url: "/docs/python",
       active: "nested-url",
     },
     {
