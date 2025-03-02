@@ -1,0 +1,7 @@
+{
+  "title": "Data Engineering",
+  "description": "Base de données, Data pipeline",
+  "icon": "Waypoints",
+  "root": true,
+  "pages": ["---Modélisation---", "datalake"]
+}

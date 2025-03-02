@@ -1,0 +1,7 @@
+{
+  "title": "Data Operations",
+  "description": "Infrastructure, CI/CD, Monitoring",
+  "icon": "Package",
+  "root": true,
+  "pages": ["---Infrastructure---", "hf-model"]
+}

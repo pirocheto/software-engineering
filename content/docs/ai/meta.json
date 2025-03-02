@@ -1,0 +1,7 @@
+{
+  "title": "Intelligence Artificielle",
+  "description": "Large Language Model, GenAI",
+  "icon": "Cpu",
+  "root": true,
+  "pages": ["---Agents---", "mtg"]
+}
