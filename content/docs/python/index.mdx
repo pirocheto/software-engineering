@@ -1,13 +1,122 @@
 ---
-title: Python
-description: "Langage de programmation interprété, orienté objet et multi-platforme."
+title: Présentation
+description: Python, le langage de programmation interprété, multi-paradigme et multi-plateformes.
 ---
 
-Welcome to the docs! You can start writing documents in `/content/docs`.
+Python est un langage portable, dynamique, extensible, gratuit, qui permet (sans l'imposer) une approche modulaire et orientée objet de la programmation.
+Il est développé depuis **1989 par Guido van Rossum**, et est actuellement maintenu par la **Python Software Foundation.**
 
-## What is Next?
+## Caractéristiques
 
-<Cards>
-  <Card title="Learn more about Next.js" href="https://nextjs.org/docs" />
-  <Card title="Learn more about Fumadocs" href="https://fumadocs.vercel.app" />
-</Cards>
+### Avantages
+
+Python possède de nombreux avantages qui en font un langage de programmation populaire et largement utilisé.
+
+- **Interprété** : Python est un langage interprété, ce qui signifie que les instructions sont exécutées directement par un interpréteur, sans nécessiter de compilation préalable.
+
+- **Orienté object** : Bien qu'il soit multi-paradigme, Python encourage une approche orientée objet de la programmation, ce qui permet de structurer le code de manière modulaire et réutilisable.
+
+- **Multi-plateformes** : Python est disponible sur de nombreuses plateformes, notamment Windows, macOS et Linux.
+
+- **Portable** : Les programmes Python sont portables, ce qui signifie qu'ils peuvent être exécutés sur différentes plateformes sans nécessiter de modifications.
+
+- **Extensible** : Python peut être étendu à l'aide de modules écrits en C ou C++, ce qui permet d'ajouter des fonctionnalités supplémentaires au langage.
+
+- **Gratuit** : Python est un logiciel libre et gratuit, ce qui signifie que vous pouvez l'utiliser, le modifier et le distribuer librement.
+
+- **Modulaire** : Python encourage une approche modulaire de la programmation, ce qui permet de réutiliser du code et de le maintenir plus facilement. Il convient aussi bien aux petits scripts qu'aux applications complexes.
+
+- **Populaire** : Python est l'un des langages de programmation les plus populaires au monde, et est largement utilisé dans de nombreux domaines, notamment le développement web, l'analyse de données et l'intelligence artificielle.
+
+- **Simple et lisible** : La syntaxe de Python est simple et lisible, ce qui facilite l'écriture et la lecture du code. Ceci permet de développer des applications plus rapidement et de les maintenir plus facilement.
+
+### Inconvénients
+
+Malgré ses nombreux avantages, Python, comme tout langage de programmation, présente quelques nconvénients qu'il est bon de connaître.
+
+- **Performances** : Python est un langage interprété, ce qui signifie qu'il est généralement plus lent que les langages compilés comme C ou C++.
+  Rassurez-vous, les performances de Python sont suffisantes pour la plupart des applications.
+  Si malgré tout vous avez besoin de performances plus élevées, plusieurs solutions existent.
+
+  1. Concentrez vous d'abord sur la qualité et l'optimisation de votre propre code.
+  2. Favorisez les bibliothèques Python optimisées (ex: Numpy pour les calculs numériques).
+  3. Si nécéssaire, vous pouvez toujours réécrire les parties critiques de votre code en C ou Rust.
+
+- **Gestion de la mémoire** : Python utilise un système de gestion de la mémoire automatique (garbage collector), ce qui signifie que vous n'avez pas à vous soucier de la gestion de la mémoire.
+  Ceci représente un avantage pour la plupart des développeurs car cela rend le langage plus simple à utiliser.
+  Cependant, cela peut entraîner des problèmes de performances dans certaines situations, notamment pour les applications nécessitant une utilisation intensive de la mémoire.
+
+- **Multiprocessing** : Le GIL (Global Interpreter Lock) est un mécanisme de verrouillage qui empêche l'exécution simultanée de plusieurs threads dans un même processus Python.
+  Cela rend la programmation multi-threading (utilisation de plusieurs threads pour exécuter du code en parallèle) plus complexe en Python que dans d'autres langages.
+  Heureusement, il existe des solutions pour contourner le GIL, notamment en utilisant le module `multiprocessing` ou en utilisant des bibliothèques spécialisées comme `Dask` ou `Ray`.
+
+## Domaines d'application
+
+Python est un langage de programmation polyvalent qui peut être utilisé dans de nombreux domaines.
+
+Parmi les domaines d'application les plus courants, on peut citer :
+
+- **Automatisation et Scripting** : Utilisé pour l'écriture de scripts, c'est-à-dire de petits programmes qui automatisent des tâches répétitives. Particulièrement adapté pour la manipulation de fichiers et de données, la gestion de systèmes et la création de scripts d'automatisation.
+
+- **Développement web** : Employé pour le développement d'APIs (Application Programming Interfaces) et de services Backend, notamment avec des frameworks populaires comme Django, Flask et FastAPI. Pour des applications web avec une interface graphique complexe, il est souvent associé à des technologies front-end comme React ou Vue.js.
+
+  Si vous recherchez un langage pour le développement d'interfaces graphiques
+  dynamiques et complexes pour le web, Python n'est pas le meilleur choix.
+  Orientez-vous plutôt vers l'écosystème JavaScript qui possède tous les
+  meilleurs outils pour ce type de projet.
+
+- **Analyse de données** : Utilisé pour l'analyse de données, notamment avec des bibliothèques populaires comme Pandas, NumPy et Matplotlib.
+
+- **Intelligence artificielle** : Essentiel dans le domaine de l'intelligence artificielle et de l'apprentissage automatique, notamment avec des bibliothèques populaires comme Scikit-learn, TensorFlow et PyTorch. Python possède également le plus vaste écosystème de bibliothèques pour les projets à base de LLM (Langage de Modélisation de Langage) et d'IA générative.
+
+- **Cybersécurité** : Utilisé pour l'automatisation des tâches de sécurité, l'analyse de logs et la création d'outils de sécurité.
+
+Python peut également être employé dans les domaines suivants même s'il n'est pas le meilleur choix :
+
+- **Développement de jeux vidéo** : Utilisé pour le développement de jeux vidéo, notamment pour les jeux 2D ou pour les prototypes.
+
+- **Développement d'applications de bureau** : Utilisé pour le développement d'applications de bureau, notamment avec des bibliothèques comme Tkinter, PyQt et Kivy.
+
+- **Développement d'applications mobiles** : Utilisé pour le développement d'applications mobiles, notamment avec des frameworks comme Kivy et BeeWare.
+
+- **Développement de systèmes embarqués** : Utilisé pour le développement de systèmes embarqués, notamment avec des microcontrôleurs comme le Raspberry Pi.
+
+Si vous prévoyez de travailler dans un de ces domaines, il est sans doute préférable de vous orienter vers un langage plus adapté.
+
+## Un peu d'histoire
+
+Le langage Python a une histoire riche qui remonte à la fin des années 1980. Voici une présentation de son origine, son évolution et son impact actuel :
+
+### Origines et Création
+
+Python a été conçu par Guido van Rossum, un programmeur néerlandais, à la fin des années 1980 et officiellement publié en 1991. Il travaillait alors au CWI (Centrum Wiskunde & Informatica) aux Pays-Bas.
+Son objectif était de créer un langage de programmation simple, lisible et puissant, inspiré du langage ABC tout en corrigeant certaines de ses limites.
+
+Voici une brève chronologie de l'évolution du langage :
+
+1. Python 1.0 (1991)
+
+   - Première version officielle.
+   - Support des types de données fondamentaux (listes, dictionnaires, etc.).
+   - Gestion des exceptions et modules intégrés.
+
+2. Python 2.0 (2000)
+
+   - Introduction de la collecte des ordures (Garbage Collector) basé sur le comptage de références.
+   - Liste en compréhension (list comprehensions).
+   - Support partiel de l’Unicode.
+
+Python 2.x a introduit de nombreuses fonctionnalités, mais n’était pas totalement compatible avec Python 3, ce qui a mené à une longue période de transition.
+
+3. Python 3.0 (2008)
+
+- Réécriture majeure pour améliorer la cohérence du langage.
+- Suppression des ambiguïtés entre print (qui devient une fonction) et unicode vs str.
+- Meilleure gestion de l'Unicode.
+- Compatibilité améliorée avec les nouvelles normes de programmation.
+
+Fin du support de Python 2 en janvier 2020.
+
+### Python Aujourd’hui
+
+Aujourd’hui, Python est l’un des langages de programmation les plus populaires au monde, utilisé par des millions de développeurs pour une grande variété de tâches. Il est largement utilisé dans les domaines de l’intelligence artificielle, de l’analyse de données, du développement web et de l’automatisation.

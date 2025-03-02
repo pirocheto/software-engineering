@@ -1,6 +1,7 @@
 import type { BaseLayoutProps } from "fumadocs-ui/layouts/shared"
 import { type LinkItemType } from "fumadocs-ui/layouts/docs"
 import { FumadocsIcon } from "@/app/layout.client"
+import { FaPython } from "react-icons/fa"
 
 export const linkItems: LinkItemType[] = [
   // {
@@ -35,9 +36,20 @@ export const baseOptions: BaseLayoutProps = {
   },
   links: [
     {
+      type: "menu",
       text: "Cours",
       url: "/docs/python",
-      active: "nested-url",
+      items: [
+        {
+          icon: <FaPython />,
+          text: "Python",
+          description: "Langage de programmation.",
+          url: "/docs/python",
+          menu: {
+            className: "lg:col-start-1",
+          },
+        },
+      ],
     },
     {
       text: "Projets",

@@ -1,29 +1,17 @@
 @import "tailwindcss";
-@import "fumadocs-ui/css/vitepress.css";
+@import "fumadocs-ui/css/neutral.css";
 @import "fumadocs-ui/css/preset.css";
 
 @source '../node_modules/fumadocs-ui/dist/**/*.js';
 
 :root {
-  --data-color: hsl(297, 60%, 31%);
-  --ops-color: hsl(220, 91%, 54%);
-  --ai-color: hsl(250, 80%, 54%);
+  --python-color: hsl(206, 41.77%, 45.54%);
 }
 
 .dark {
-  --data-color: hsl(297, 44%, 70%);
-  --ops-color: hsl(217 92% 76%);
-  --ai-color: hsl(250 100% 80%);
+  --python-color: hsl(217 92% 76%);
 }
 
-.ai {
-  --color-fd-primary: var(--ai-color);
-}
-
-.data {
-  --color-fd-primary: var(--data-color);
-}
-
-.ops {
-  --color-fd-primary: var(--ops-color);
+.python {
+  --color-fd-primary: var(--python-color);
 }

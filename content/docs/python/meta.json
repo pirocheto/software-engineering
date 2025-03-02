@@ -3,5 +3,10 @@
   "description": "Langage de programmation",
   "icon": "FaPython",
   "root": true,
-  "pages": ["intro"]
+  "pages": [
+    "---Démarrage---",
+    "index",
+    "installation",
+    "---Concepts de base---"
+  ]
 }
