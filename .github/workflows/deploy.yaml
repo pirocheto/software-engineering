@@ -20,7 +20,7 @@ jobs:
       - name: Build
         run: |
           npm run build
-          touch ./out/_next/.nojekyll
+          touch ./out/.nojekyll
 
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4
