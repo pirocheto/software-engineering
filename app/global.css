@@ -4,14 +4,19 @@
 
 @source '../node_modules/fumadocs-ui/dist/**/*.js';
 
+.python {
+  --color-fd-primary: var(--python-color);
+}
+
 :root {
   --python-color: hsl(206, 41.77%, 45.54%);
 }
 
-.dark {
-  --python-color: hsl(217 92% 76%);
+body {
+  overscroll-behavior-y: none;
+  background-color: var(--color-fd-background);
 }
 
-.python {
-  --color-fd-primary: var(--python-color);
+.dark {
+  --python-color: hsl(217 92% 76%);
 }

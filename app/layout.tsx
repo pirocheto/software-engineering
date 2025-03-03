@@ -2,6 +2,8 @@ import "./global.css"
 import { RootProvider } from "fumadocs-ui/provider"
 import { Montserrat } from "next/font/google"
 import type { ReactNode } from "react"
+import { Body } from "@/app/layout.client"
+import { source } from "@/lib/source"
 
 const inter = Montserrat({
   subsets: ["latin"],
@@ -10,7 +12,7 @@ const inter = Montserrat({
 export default function Layout({ children }: { children: ReactNode }) {
   return (
     <html lang="en" className={inter.className} suppressHydrationWarning>
-      <body className="flex flex-col min-h-screen">
+      <Body>
         <RootProvider
           search={{
             options: {
@@ -20,7 +22,7 @@ export default function Layout({ children }: { children: ReactNode }) {
         >
           {children}
         </RootProvider>
-      </body>
+      </Body>
     </html>
   )
 }

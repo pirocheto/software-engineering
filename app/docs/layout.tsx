@@ -2,12 +2,16 @@
 import { DocsLayout, type DocsLayoutProps } from "fumadocs-ui/layouts/notebook"
 import { baseOptions, linkItems } from "@/app/layout.config"
 import { source } from "@/lib/source"
+import { useRouter } from "next/navigation"
 import type { ReactNode } from "react"
 
 const docsOptions: DocsLayoutProps = {
   ...baseOptions,
   tree: source.pageTree,
   // links: linkItems,
+  // containerProps: {
+  //   className: "python",
+  // },
   sidebar: {
     tabs: {
       transform(option, node) {
@@ -39,9 +43,5 @@ const docsOptions: DocsLayoutProps = {
 }
 
 export default function Layout({ children }: { children: ReactNode }) {
-  return (
-    <DocsLayout {...docsOptions} tree={source.pageTree}>
-      {children}
-    </DocsLayout>
-  )
+  return <DocsLayout {...docsOptions}>{children}</DocsLayout>
 }
