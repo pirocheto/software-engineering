@@ -1,7 +1,8 @@
 import type { BaseLayoutProps } from "fumadocs-ui/layouts/shared"
 import { type LinkItemType } from "fumadocs-ui/layouts/docs"
 import { FumadocsIcon } from "@/app/layout.client"
-import { FaPython } from "react-icons/fa"
+import { FaPython, FaDocker, FaGitAlt } from "react-icons/fa"
+import { SiFastapi, SiLangchain } from "react-icons/si"
 
 export const linkItems: LinkItemType[] = [
   // {
@@ -46,7 +47,43 @@ export const baseOptions: BaseLayoutProps = {
           description: "Langage de programmation.",
           url: "/docs/python",
           menu: {
-            className: "lg:col-start-1",
+            className: "col-span-2 python menu-item",
+          },
+        },
+        {
+          icon: <FaGitAlt />,
+          text: "Git",
+          description: "Système de contrôle de version.",
+          url: "/docs/git",
+          menu: {
+            className: "git menu-item",
+          },
+        },
+        {
+          icon: <SiFastapi />,
+          text: "FastAPI",
+          description: "Framework web pour Python.",
+          url: "/docs/fastapi",
+          menu: {
+            className: "fastapi menu-item",
+          },
+        },
+        {
+          icon: <FaDocker />,
+          text: "Docker",
+          description: "Plateforme de conteneurisation.",
+          url: "/docs/docker",
+          menu: {
+            className: "docker menu-item",
+          },
+        },
+        {
+          icon: <SiLangchain />,
+          text: "LangChain",
+          description: "Framework pour les applications avec LLM.",
+          url: "/docs/langchain",
+          menu: {
+            className: "langchain menu-item",
           },
         },
       ],

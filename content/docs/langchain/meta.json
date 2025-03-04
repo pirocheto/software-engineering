@@ -1,0 +1,12 @@
+{
+  "title": "LangChain",
+  "description": "Framework pour les applications avec LLM",
+  "icon": "SiLangchain",
+  "root": true,
+  "pages": [
+    "---Démarrage---",
+    "index",
+    "installation",
+    "---Concepts de base---"
+  ]
+}

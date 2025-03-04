@@ -8,8 +8,47 @@
   --color-fd-primary: var(--python-color);
 }
 
+.docker {
+  --color-fd-primary: var(--docker-color);
+}
+
+.fastapi {
+  --color-fd-primary: var(--fastapi-color);
+}
+
+.langchain {
+  --color-fd-primary: var(--langchain-color);
+}
+
+.git {
+  --color-fd-primary: var(--git-color);
+}
+
+.menu-item {
+  color: var(--color-fd-primary, var(--color-fd-foreground));
+}
+
+.menu-item div:first-of-type {
+  border: 1px solid
+    color-mix(
+      in oklab,
+      var(--python-color, var(--color-fd-foreground)) 50%,
+      transparent
+    );
+  --tw-ring-color: color-mix(
+    in oklab,
+    var(--color-fd-primary, var(--color-fd-foreground)) 20%,
+    transparent
+  );
+  @apply ring-2;
+}
+
 :root {
   --python-color: hsl(206, 41.77%, 45.54%);
+  --docker-color: hsl(220 85.3% 52%);
+  --fastapi-color: hsl(174 100% 29%);
+  --langchain-color: hsl(180 29.4% 20%);
+  --git-color: hsl(10 85.8% 58.4%);
 }
 
 body {
@@ -19,4 +58,8 @@ body {
 
 .dark {
   --python-color: hsl(217 92% 76%);
+  --docker-color: hsl(220, 66%, 68%);
+  --fastapi-color: hsl(174, 99%, 40%);
+  --langchain-color: hsl(180, 32%, 55%);
+  --git-color: hsl(10 85.8% 58.4%);
 }

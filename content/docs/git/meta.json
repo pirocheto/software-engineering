@@ -1,0 +1,12 @@
+{
+  "title": "Git",
+  "description": "Système de contrôle de version",
+  "icon": "FaGitAlt",
+  "root": true,
+  "pages": [
+    "---Démarrage---",
+    "index",
+    "installation",
+    "---Concepts de base---"
+  ]
+}

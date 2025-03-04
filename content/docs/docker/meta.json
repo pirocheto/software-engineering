@@ -1,0 +1,12 @@
+{
+  "title": "Docker",
+  "description": "Outil de conteneurisation",
+  "icon": "FaDocker",
+  "root": true,
+  "pages": [
+    "---Démarrage---",
+    "index",
+    "installation",
+    "---Concepts de base---"
+  ]
+}

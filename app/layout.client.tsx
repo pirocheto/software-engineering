@@ -33,7 +33,10 @@ export function FumadocsIcon(props: React.SVGProps<SVGSVGElement>) {
       filter={`url(#${id}-shadow)`}
       {...props}
     >
-      <circle cx="90" cy="90" r="90" fill={`url(#${id}-iconGradient)`} />
+      <polygon
+        points="90,15 165,165 15,165"
+        fill={`url(#${id}-iconGradient)`}
+      />
       <defs>
         <filter id={`${id}-shadow`} colorInterpolationFilters="sRGB">
           <feDropShadow

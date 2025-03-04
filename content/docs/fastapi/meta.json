@@ -1,0 +1,12 @@
+{
+  "title": "FastAPI",
+  "description": "Framework web",
+  "icon": "SiFastapi",
+  "root": true,
+  "pages": [
+    "---Démarrage---",
+    "index",
+    "installation",
+    "---Concepts de base---"
+  ]
+}
