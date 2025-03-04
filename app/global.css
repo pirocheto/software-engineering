@@ -28,6 +28,10 @@
   --color-fd-primary: var(--grafana-color);
 }
 
+.grafana-menu {
+  --color-fd-primary: var(--grafana-color) !important;
+}
+
 .menu-item {
   color: var(--color-fd-primary, var(--color-fd-foreground));
 }
@@ -68,4 +72,32 @@ body {
   --sql-color: hsl(320, 44%, 56%);
   --git-color: hsl(10 85.8% 58.4%);
   --grafana-color: hsl(21 91% 56.7%);
+}
+
+/* [data-state="open"] {
+  color: var(--color-fd-primary);
+} */
+
+.python-hover:hover {
+  color: var(--python-color);
+}
+
+.git-hover:hover {
+  color: var(--git-color);
+}
+
+.docker-hover:hover {
+  color: var(--docker-color);
+}
+
+.fastapi-hover:hover {
+  color: var(--fastapi-color);
+}
+
+.grafana-hover:hover {
+  color: var(--grafana-color);
+}
+
+.sql-hover:hover {
+  color: var(--sql-color);
 }
