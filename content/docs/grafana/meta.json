@@ -1,7 +1,7 @@
 {
-  "title": "LangChain",
-  "description": "Framework pour les applications avec LLM",
-  "icon": "SiLangchain",
+  "title": "Grafana",
+  "description": "Plateforme de visualisation de données",
+  "icon": "SiGrafana",
   "root": true,
   "pages": [
     "---Démarrage---",

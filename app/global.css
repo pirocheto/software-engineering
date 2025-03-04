@@ -16,12 +16,16 @@
   --color-fd-primary: var(--fastapi-color);
 }
 
-.langchain {
-  --color-fd-primary: var(--langchain-color);
+.sql {
+  --color-fd-primary: var(--sql-color);
 }
 
 .git {
   --color-fd-primary: var(--git-color);
+}
+
+.grafana {
+  --color-fd-primary: var(--grafana-color);
 }
 
 .menu-item {
@@ -47,8 +51,9 @@
   --python-color: hsl(206, 41.77%, 45.54%);
   --docker-color: hsl(220 85.3% 52%);
   --fastapi-color: hsl(174 100% 29%);
-  --langchain-color: hsl(180 29.4% 20%);
+  --sql-color: hsl(320, 44%, 56%);
   --git-color: hsl(10 85.8% 58.4%);
+  --grafana-color: hsl(21 91% 56.7%);
 }
 
 body {
@@ -60,6 +65,7 @@ body {
   --python-color: hsl(217 92% 76%);
   --docker-color: hsl(220, 66%, 68%);
   --fastapi-color: hsl(174, 99%, 40%);
-  --langchain-color: hsl(180, 32%, 55%);
+  --sql-color: hsl(320, 44%, 56%);
   --git-color: hsl(10 85.8% 58.4%);
+  --grafana-color: hsl(21 91% 56.7%);
 }

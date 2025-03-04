@@ -1,8 +1,8 @@
 import type { BaseLayoutProps } from "fumadocs-ui/layouts/shared"
 import { type LinkItemType } from "fumadocs-ui/layouts/docs"
 import { FumadocsIcon } from "@/app/layout.client"
-import { FaPython, FaDocker, FaGitAlt } from "react-icons/fa"
-import { SiFastapi, SiLangchain } from "react-icons/si"
+import { FaPython, FaDocker, FaGitAlt, FaDatabase } from "react-icons/fa"
+import { SiFastapi, SiGrafana } from "react-icons/si"
 
 export const linkItems: LinkItemType[] = [
   // {
@@ -47,7 +47,7 @@ export const baseOptions: BaseLayoutProps = {
           description: "Langage de programmation.",
           url: "/docs/python",
           menu: {
-            className: "col-span-2 python menu-item",
+            className: "python menu-item",
           },
         },
         {
@@ -57,6 +57,15 @@ export const baseOptions: BaseLayoutProps = {
           url: "/docs/git",
           menu: {
             className: "git menu-item",
+          },
+        },
+        {
+          icon: <FaDatabase />,
+          text: "SQL",
+          description: "Langage de requête structurée.",
+          url: "/docs/sql",
+          menu: {
+            className: "sql menu-item",
           },
         },
         {
@@ -78,12 +87,12 @@ export const baseOptions: BaseLayoutProps = {
           },
         },
         {
-          icon: <SiLangchain />,
-          text: "LangChain",
-          description: "Framework pour les applications avec LLM.",
-          url: "/docs/langchain",
+          icon: <SiGrafana />,
+          text: "Grafana",
+          description: "Plateforme de visualisation de données.",
+          url: "/docs/grafana",
           menu: {
-            className: "langchain menu-item",
+            className: "grafana menu-item",
           },
         },
       ],

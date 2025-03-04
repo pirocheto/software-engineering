@@ -1,0 +1,12 @@
+{
+  "title": "SQL",
+  "description": "Langage de requête structurée",
+  "icon": "FaDatabase",
+  "root": true,
+  "pages": [
+    "---Démarrage---",
+    "index",
+    "installation",
+    "---Concepts de base---"
+  ]
+}
