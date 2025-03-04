@@ -3,16 +3,17 @@ import Link from "next/link"
 export default function HomePage() {
   return (
     <main className="flex flex-1 flex-col justify-center text-center">
-      <h1 className="mb-4 text-2xl font-bold">Hello World</h1>
+      <h1 className="mb-4 text-2xl font-bold">Pierre Rochet, Data ingénieur</h1>
+      <h2 className="mb-4 text-lg font-semibold">
+        Bienvenue sur mon site personnel
+      </h2>
       <p className="text-fd-muted-foreground">
-        You can open{" "}
         <Link
-          href="/docs"
+          href="/docs/python"
           className="text-fd-foreground font-semibold underline"
         >
-          /docs
+          Commencer la lecture
         </Link>{" "}
-        and see the documentation.
       </p>
     </main>
   )
