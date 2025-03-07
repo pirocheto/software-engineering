@@ -16,7 +16,7 @@ export default function Layout({ children }: { children: ReactNode }) {
           search={{
             options: {
               type: "static",
-              api: process.env.BASE_PATH || "" + "/api/search",
+              api: (process.env.BASE_PATH || "") + "/api/search",
             },
           }}
         >
