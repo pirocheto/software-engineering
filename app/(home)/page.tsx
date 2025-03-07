@@ -40,18 +40,6 @@ export default function HomePage() {
         </p>
       </div>
 
-      {/* <div className="flex flex-col items-center gap-4 text-fd-primary">
-        <p className=" text-lg">Parcourez les rubriques</p>
-        <PiArrowCircleDown size={40} className=" animate-bounce" />
-      </div> */}
-
-      {/* <h2 className="text-3xl font-semibold">Les cours</h2>
-      <p className="text-fd-muted-foreground">
-        Découvrez les cours que je propose sur les technologies fondamentales du
-        développement backend pour le domaine de la data et de l'intelligence
-        artificielle.
-      </p> */}
-
       <Cards className="grid grid-cols-1 gap-7 sm:grid-cols-2 lg:grid-cols-3">
         <Card
           icon={<FaBook className="menu-item" />}

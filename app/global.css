@@ -48,7 +48,7 @@
 }
 
 :root {
-  --color-fd-primary: hsl(190, 84%, 40%);
+  --color-fd-primary: hsl(190, 72%, 42%);
 
   --python-color: hsl(206, 41.77%, 45.54%);
   --docker-color: hsl(220 85.3% 52%);

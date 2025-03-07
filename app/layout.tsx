@@ -14,11 +14,11 @@ export default function Layout({ children }: { children: ReactNode }) {
   return (
     <html lang="en" className={inter.className} suppressHydrationWarning>
       <Body>
-        <Banner variant="rainbow" className="flex gap-2">
+        {/* <Banner variant="rainbow" className="flex gap-2">
           <IoIosWarning size={20} />
           Site en cours de développement
           <IoIosWarning size={20} />
-        </Banner>
+        </Banner> */}
         <RootProvider
           search={{
             options: {
