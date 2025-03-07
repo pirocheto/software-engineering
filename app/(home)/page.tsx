@@ -6,10 +6,10 @@ import { FaPenToSquare } from "react-icons/fa6"
 
 export default function HomePage() {
   return (
-    <main className="flex flex-1 flex-col gap-10 justify-center container">
+    <main className="flex flex-1 flex-col gap-10 justify-center mt-12 sm:mt-0 container xs:mt-20">
       <div className="font-bold">
-        <h1 className="mb-4 text-5xl">Pierre Rochet</h1>
-        <div className="inline-flex flex-wrap gap-2 text-3xl uppercase">
+        <h1 className="mb-4 text-3xl sm:text-4xl">Pierre Rochet</h1>
+        <div className="inline-flex flex-wrap gap-2 text-3xl sm:text-2xl uppercase">
           <p className="">Ingénieur</p>
           <TextTyped
             className="text-fd-primary"
@@ -23,7 +23,7 @@ export default function HomePage() {
             backSpeed={50}
             cursorChar=""
             // fadeOut={true}
-            loop
+            // loop
           />
         </div>
       </div>
