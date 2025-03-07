@@ -26,12 +26,12 @@ export const linkItems: LinkItemType[] = [
  * Docs Layout: app/docs/layout.tsx
  */
 export const baseOptions: BaseLayoutProps = {
-  githubUrl: "pirocheto/fumadocs",
+  githubUrl: "https://github.com/pirocheto",
   nav: {
     title: (
       <>
         <FumadocsIcon className="size-5 [.uwu_&]:hidden" fill="currentColor" />
-        Pirocheto
+        Pierre Rochet
       </>
     ),
   },

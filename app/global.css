@@ -28,10 +28,6 @@
   --color-fd-primary: var(--grafana-color);
 }
 
-.grafana-menu {
-  --color-fd-primary: var(--grafana-color) !important;
-}
-
 .menu-item {
   color: var(--color-fd-primary, var(--color-fd-foreground));
 }
@@ -52,6 +48,8 @@
 }
 
 :root {
+  --color-fd-primary: hsl(190, 84%, 40%);
+
   --python-color: hsl(206, 41.77%, 45.54%);
   --docker-color: hsl(220 85.3% 52%);
   --fastapi-color: hsl(174 100% 29%);
@@ -66,6 +64,8 @@ body {
 }
 
 .dark {
+  --color-fd-primary: hsl(190, 84%, 40%);
+
   --python-color: hsl(217 92% 76%);
   --docker-color: hsl(220, 66%, 68%);
   --fastapi-color: hsl(174, 99%, 40%);
