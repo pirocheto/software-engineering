@@ -8,9 +8,9 @@ export default function HomePage() {
   return (
     <main className="flex flex-1 flex-col gap-10 justify-center mt-12 sm:mt-0 container xs:mt-20">
       <div className="font-bold">
-        <h1 className="mb-4 text-3xl sm:text-4xl">Pierre Rochet</h1>
-        <div className="inline-flex flex-wrap gap-2 text-3xl sm:text-2xl uppercase">
-          <p className="">Ingénieur</p>
+        <h1 className="mb-4 text-4xl sm:text-5xl">Pierre Rochet</h1>
+        <div className="inline-flex flex-wrap text-2xl sm:text-3xl uppercase">
+          <p className="mr-2">Ingénieur</p>
           <TextTyped
             className="text-fd-primary"
             strings={[
