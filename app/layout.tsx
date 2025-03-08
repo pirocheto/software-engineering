@@ -4,30 +4,49 @@ import { Montserrat } from "next/font/google"
 import type { ReactNode } from "react"
 import { Body } from "@/app/layout.client"
 // import { I18nProvider, type Translations } from 'fumadocs-ui/i18n';
+import { I18nProvider, type Translations } from "fumadocs-ui/i18n"
+
+const fr: Partial<Translations> = {
+  search: "Rechercher",
+  searchNoResult: "Aucun résultat",
+  toc: "Sommaire",
+  tocNoHeadings: "Aucun titre",
+  lastUpdate: "Dernière mise à jour",
+  chooseLanguage: "Choisir la langue",
+  nextPage: "Page suivante",
+  previousPage: "Page précédente",
+  chooseTheme: "Choisir le thème",
+  editOnGithub: "Modifier sur GitHub",
+}
 
 const inter = Montserrat({
   subsets: ["latin"],
 })
 
-export default function Layout({ children }: { children: ReactNode }) {
+export default async function Layout({
+  params,
+  children,
+}: {
+  params: Promise<{ lang: string }>
+  children: ReactNode
+}) {
+  const lang = "fr"
+
   return (
-    <html lang="fr-FR" className={inter.className} suppressHydrationWarning>
+    <html lang={lang} className={inter.className} suppressHydrationWarning>
       <Body>
-        {/* <Banner variant="rainbow" className="flex gap-2">
-          <IoIosWarning size={20} />
-          Site en cours de développement
-          <IoIosWarning size={20} />
-        </Banner> */}
-        <RootProvider
-          search={{
-            options: {
-              type: "static",
-              api: (process.env.BASE_PATH || "") + "/api/search",
-            },
-          }}
-        >
-          {children}
-        </RootProvider>
+        <I18nProvider locale={lang} translations={{ ...fr }}>
+          <RootProvider
+            search={{
+              options: {
+                type: "static",
+                api: (process.env.BASE_PATH || "") + "/api/search",
+              },
+            }}
+          >
+            {children}
+          </RootProvider>
+        </I18nProvider>
       </Body>
     </html>
   )

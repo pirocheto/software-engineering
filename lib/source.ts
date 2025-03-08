@@ -5,8 +5,10 @@ import { icons } from "lucide-react"
 import * as FaIcons from "react-icons/fa"
 import * as SiIcons from "react-icons/si"
 import { createMDXSource } from "fumadocs-mdx"
+import { i18n } from "@/lib/i18n"
 
 export const source = loader({
+  // i18n,
   baseUrl: "/docs",
   source: docs.toFumadocsSource(),
   icon(icon) {
@@ -20,11 +22,13 @@ export const source = loader({
 })
 
 export const blog = loader({
+  // i18n,
   baseUrl: "/blog",
   source: createMDXSource(blogPosts),
 })
 
 export const projects = loader({
+  // i18n,
   baseUrl: "/projects",
   source: createMDXSource(projectPosts),
 })

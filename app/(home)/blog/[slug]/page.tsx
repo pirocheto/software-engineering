@@ -44,7 +44,9 @@ export default async function Page(props: {
       </div>
       <article className="container flex flex-col px-4 py-8">
         <div className="prose min-w-0">
-          <InlineTOC items={page.data.toc} defaultOpen={true} />
+          <InlineTOC items={page.data.toc} defaultOpen={true}>
+            Sommaire
+          </InlineTOC>
           <Mdx components={defaultMdxComponents} />
         </div>
         <div className="flex flex-col gap-4 text-sm">

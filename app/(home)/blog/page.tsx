@@ -1,8 +1,13 @@
 import Link from "next/link"
 import { blog } from "@/lib/source"
 
-export default function Home() {
-  const posts = blog.getPages()
+export default async function Home({
+  params,
+}: {
+  params: Promise<{ lang: string; slug?: string[] }>
+}) {
+  const { lang } = await params
+  const posts = blog.getPages(lang)
 
   return (
     <main className="grow container mx-auto px-4 py-8">
