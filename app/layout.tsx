@@ -3,8 +3,7 @@ import { RootProvider } from "fumadocs-ui/provider"
 import { Montserrat } from "next/font/google"
 import type { ReactNode } from "react"
 import { Body } from "@/app/layout.client"
-import { Banner } from "fumadocs-ui/components/banner"
-import { IoIosWarning } from "react-icons/io"
+// import { I18nProvider, type Translations } from 'fumadocs-ui/i18n';
 
 const inter = Montserrat({
   subsets: ["latin"],
@@ -12,7 +11,7 @@ const inter = Montserrat({
 
 export default function Layout({ children }: { children: ReactNode }) {
   return (
-    <html lang="en" className={inter.className} suppressHydrationWarning>
+    <html lang="fr-FR" className={inter.className} suppressHydrationWarning>
       <Body>
         {/* <Banner variant="rainbow" className="flex gap-2">
           <IoIosWarning size={20} />

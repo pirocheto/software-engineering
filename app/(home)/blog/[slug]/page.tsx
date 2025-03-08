@@ -3,6 +3,8 @@ import Link from "next/link"
 import { InlineTOC } from "fumadocs-ui/components/inline-toc"
 import defaultMdxComponents from "fumadocs-ui/mdx"
 import { blog } from "@/lib/source"
+import { ArrowLeft } from "lucide-react"
+import * as Base from "fumadocs-core/toc"
 
 export async function generateMetadata(props: {
   params: Promise<{ slug: string }>
@@ -28,15 +30,21 @@ export default async function Page(props: {
   const Mdx = page.data.body
 
   return (
-    <>
+    <div className="p-10">
       <div className="container rounded-xl border py-12 md:px-8">
         <h1 className="mb-2 text-3xl font-bold">{page.data.title}</h1>
         <p className="mb-4 text-fd-muted-foreground">{page.data.description}</p>
-        <Link href="/blog">Retour</Link>
+        <Link
+          href="/blog"
+          className="flex flex-nowrap gap-2 text-fd-muted-foreground"
+        >
+          <ArrowLeft />
+          Retour au blog
+        </Link>
       </div>
       <article className="container flex flex-col px-4 py-8">
         <div className="prose min-w-0">
-          <InlineTOC items={page.data.toc} />
+          <InlineTOC items={page.data.toc} defaultOpen={true} />
           <Mdx components={defaultMdxComponents} />
         </div>
         <div className="flex flex-col gap-4 text-sm">
@@ -52,7 +60,7 @@ export default async function Page(props: {
           </div>
         </div>
       </article>
-    </>
+    </div>
   )
 }
 
