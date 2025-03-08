@@ -9,7 +9,7 @@ import { I18nProvider, type Translations } from "fumadocs-ui/i18n"
 const fr: Partial<Translations> = {
   search: "Rechercher",
   searchNoResult: "Aucun résultat",
-  toc: "Sommaire",
+  toc: "Sur cette page",
   tocNoHeadings: "Aucun titre",
   lastUpdate: "Dernière mise à jour",
   chooseLanguage: "Choisir la langue",
@@ -30,12 +30,13 @@ export default async function Layout({
   params: Promise<{ lang: string }>
   children: ReactNode
 }) {
-  const lang = (await params).lang
+  // const lang = (await params).lang
+  const lang = "fr"
 
   return (
-    <html lang="fr" className={inter.className} suppressHydrationWarning>
+    <html lang={lang} className={inter.className} suppressHydrationWarning>
       <Body>
-        <I18nProvider locale={lang} translations={{ fr }[lang]}>
+        <I18nProvider locale="" translations={{ fr }[lang]}>
           <RootProvider
             search={{
               options: {
