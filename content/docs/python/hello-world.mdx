@@ -1,0 +1,97 @@
+---
+title: Hello World
+description: "Le traditionnel Hello World en Python."
+---
+
+import { Callout } from "fumadocs-ui/components/callout"
+
+## Qu'est-ce que le Hello World ?
+
+Le Hello World est un programme informatique traditionnellement utilisé pour illustrer les bases d'un langage de programmation. Il est souvent le premier programme que les développeurs écrivent lorsqu'ils apprennent un nouveau langage.
+En général, il donne un aperçu de la syntaxe du langage et de la façon dont les programmes sont exécutés.
+Ceci donne une première impression sur la difficulté du langage et permet de vérifier que l'environnement est correctement installé.
+
+## Afficher Hello World dans l'interpréteur
+
+### Ouverture de l'interpréteur Python
+
+Pour afficher Hello World en Python, vous pouvez ouvrir l'[interpréteur](./glossary#interpréteur) Python en tapant `python` ou `python3` dans votre terminal.
+
+![Interpréteur Python](/python-interpreter.png)
+
+Ne vous inquiétez pas si la version de Python affichée est différente de celle ci-dessus. Tant que vous avez une version de Python 3, vous pouvez suivre ce tutoriel.
+
+<Callout type="info" title="Version de Python">
+  Avec certaines installations il est possible que vous avez besoin de spécifier
+  la version de Python à utiliser. Dans ce cas, vous pouvez taper `python3` à la
+  place de `python`. Si cela fonctionne il faudra utiliser `python3` pour tous
+  les exemples suivants.
+</Callout>
+
+Si une erreur `python: command not found` persiste, cela signifie sans doute que Python n'est pas installé ou configuré correctement sur votre machine. Vous pouvez consulter la [documentation officielle](https://www.python.org/downloads/) pour obtenir de l'aide sur l'installation de Python.
+
+### Affichage de Hello World
+
+A cette étape vous vous trouvez dans l'[interpréteur](/glossary#interpréteur) Python. Toutes les instructions que vous taperez seront interprétées
+par Python. Vous pouvez donc commencer à écrire du code.
+Pour afficher Hello World, vous pouvez utiliser la [fonction](./glossary#fonction) `print()`.
+
+```python
+>>> print("Hello World")
+Hello World
+```
+
+![Ouverture de l'interpréteur Python](/python-hello-world.png)
+
+La fonction `print()` permet d'afficher du texte à l'écran. Dans cet exemple, nous avons passé le texte `Hello World` en [argument](./glossary#argument) à la fonction `print()`.
+
+Félicitations ! Vous avez affiché Hello World en Python.
+Vous pouvez donc dire que vous avez écrit votre premier programme en Python.
+
+## Écrire un script Hello World
+
+L'[interpréteur](/glossary#interpréteur) python est très pratique pour tester des [instructions](glossary#instruction) rapidement, en revanche il n'est pas adapté pour écrire des programmes plus longs et complexes.
+En général, les programmes sont écrits dans des fichiers appelés [scripts](./glossary#script). Ces fichiers contiennent une suite d'instructions qui sont exécutées les unes après les autres.
+
+Pour écrire un script il vous suffit d'ouvrir un éditeur de texte, d'écrire votre code, c'est à dire les instructions qui seront exécutées par l'interpréteur, et de sauvegarder le fichier avec l'extension `.py`.
+
+<Callout type="info" title="Extension de fichier">
+  En réalité l'extension `.py` n'est pas obligatoire mais elle permet de
+  reconnaître facilement les fichiers Python. Prenez l'habitude de toujours
+  nommer vos scripts Python avec cette extension.
+</Callout>
+
+En général on écrit du code dans un éditeur de texte spécialisé appelé un [IDE (Integrated Development Environment)](./glossary#ide).
+Cependant, pour cet exemple, vous pouvez utiliser n'importe quel éditeur de texte simple comme Notepad++ ou même le Bloc-notes de votre système d'exploitation.
+
+### Création du fichier
+
+Créer un nouveau fichier que vous nommerez `hello.py` et écrivez le code suivant :
+
+```python title="hello.py"
+print("Hello World")
+```
+
+Sauvegardez le fichier et fermez l'éditeur de texte.
+
+### Exécution du script
+
+Ouvrez un [terminal](./glossary#terminal) et déplacez-vous dans le répertoire où vous avez sauvegardé le fichier `hello.py`.
+
+Par exemple si vous avez sauvegardé le fichier dans le dossier `Documents`, vous pouvez taper :
+
+```bash title="Terminal"
+cd Documents
+```
+
+Ensuite, vous pouvez exécuter le script en tapant :
+
+```bash title="Terminal"
+python hello.py
+```
+
+Vous devriez voir `Hello World` s'afficher à l'écran.
+
+![Execution du script Hello World](/python-hello-world-script.png)
+
+Félicitations ! Vous avez écrit et exécuté votre premier script en Python.

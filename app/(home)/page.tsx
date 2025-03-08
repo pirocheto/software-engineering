@@ -51,14 +51,14 @@ export default function HomePage() {
         <Card
           icon={<FaTools className="menu-item" />}
           className="menu-item shadow-none"
-          href="/docs/projects"
+          href="/projects"
           title="Les projets"
           description="Découvrez des projets concrets avec code source et des explications détaillés sur chaque étape de développement."
         />
         <Card
           icon={<FaPenToSquare className="menu-item" />}
           className="menu-item shadow-none"
-          href="/docs/blog"
+          href="/blog"
           title="Le blog"
           description="Découvrez des tutoriels, des astuces et des retours d'expérience sur le développement, la data et l'intelligence artificielle."
         />
