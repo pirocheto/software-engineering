@@ -32,7 +32,7 @@ export default async function Page(props: {
       <div className="container rounded-xl border py-12 md:px-8">
         <h1 className="mb-2 text-3xl font-bold">{page.data.title}</h1>
         <p className="mb-4 text-fd-muted-foreground">{page.data.description}</p>
-        <Link href="/blog">Back</Link>
+        <Link href="/blog">Retour</Link>
       </div>
       <article className="container flex flex-col px-4 py-8">
         <div className="prose min-w-0">
@@ -41,11 +41,11 @@ export default async function Page(props: {
         </div>
         <div className="flex flex-col gap-4 text-sm">
           <div>
-            <p className="mb-1 text-fd-muted-foreground">Written by</p>
+            <p className="mb-1 text-fd-muted-foreground">Écrit par</p>
             <p className="font-medium">{page.data.author}</p>
           </div>
           <div>
-            <p className="mb-1 text-sm text-fd-muted-foreground">At</p>
+            <p className="mb-1 text-sm text-fd-muted-foreground">Le</p>
             <p className="font-medium">
               {new Date(page.data.date).toDateString()}
             </p>
