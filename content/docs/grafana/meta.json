@@ -3,10 +3,5 @@
   "description": "Plateforme de visualisation de données",
   "icon": "SiGrafana",
   "root": true,
-  "pages": [
-    "---Démarrage---",
-    "index",
-    "installation",
-    "---Concepts de base---"
-  ]
+  "pages": ["index"]
 }
