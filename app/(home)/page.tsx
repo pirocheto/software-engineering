@@ -30,12 +30,9 @@ export default function HomePage() {
       <div>
         <p className="text-fd-muted-foreground text-lg">
           Bienvenue sur mon site personnel. Je suis Pierre Rochet ingénieur
-          logiciel spécialisé en{" "}
-          <span className="text-fd-primary">
-            {" "}
-            data et intelligence artificielle
-          </span>
-          . Je partage ici mes connaissances et découvertes à travers des cours,
+          logiciel spécialisé en <span className="text-fd-primary">data</span>{" "}
+          et <span className="text-fd-primary">intelligence artificielle</span>.
+          Je partage ici mes connaissances et découvertes à travers des cours,
           des articles et des projets détaillés.
         </p>
       </div>
