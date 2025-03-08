@@ -30,7 +30,7 @@ export default async function Page(props: {
   const Mdx = page.data.body
 
   return (
-    <div className="p-10">
+    <div className="py-10">
       <div className="container rounded-xl border py-12 md:px-8">
         <h1 className="mb-2 text-3xl font-bold">{page.data.title}</h1>
         <p className="mb-4 text-fd-muted-foreground">{page.data.description}</p>
