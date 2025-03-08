@@ -30,12 +30,12 @@ export default async function Layout({
   params: Promise<{ lang: string }>
   children: ReactNode
 }) {
-  const lang = "fr"
+  const lang = (await params).lang
 
   return (
-    <html lang={lang} className={inter.className} suppressHydrationWarning>
+    <html lang="fr" className={inter.className} suppressHydrationWarning>
       <Body>
-        <I18nProvider locale={lang} translations={{ ...fr }}>
+        <I18nProvider locale={lang} translations={{ fr }[lang]}>
           <RootProvider
             search={{
               options: {
