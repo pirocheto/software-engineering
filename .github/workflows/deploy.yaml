@@ -19,7 +19,7 @@ jobs:
 
       - name: Build
         env:
-          BASE_PATH: /data-engineering
+          BASE_PATH: /software-engineering
         run: |
           npm run build
           touch ./out/.nojekyll
