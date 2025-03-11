@@ -8,6 +8,8 @@ import {
 import { notFound } from "next/navigation"
 import defaultMdxComponents from "fumadocs-ui/mdx"
 import { ImageZoom } from "fumadocs-ui/components/image-zoom"
+import { Callout } from "fumadocs-ui/components/callout"
+import Slides from "@/components/dynamic/slides"
 
 export default async function Page(props: {
   params: Promise<{ slug?: string[] }>

@@ -1,6 +1,40 @@
 ---
 title: Variables
+icon: Box
 description: "Les variables sont des conteneurs pour stocker des données. Elles sont utilisées pour stocker des valeurs pour une utilisation ultérieure."
 ---
 
-## Variables
+import Slides from "@/components/slides/variables"
+
+<Slides />
+
+## Qu'est-ce qu'une variable ?
+
+En programmation, une variable est un conteneur pour stocker des données. Elle est utilisée pour stocker des valeurs pour une utilisation ultérieure dans un programme. Les variables peuvent contenir différents types de données, tels que des nombres, des chaînes de caractères, des listes, des dictionnaires, etc.
+
+### Une analogie pour comprendre les variables [!toc]
+
+Une [variable](./glossary#variable) en Python, c’est comme une **boîte étiquetée** où ranger une valeur pour la retrouver plus tard.
+
+Imaginons que nous ayons une boîte avec une étiquette qui dit “âge”, et à l’intérieur, nous y mettons un papier avec le nombre 25. Plus tard, il suffira de regarder dans la boîte pour connaître l'age.
+Et si la personne fête son anniversaire, on peut remplacer la valeur 25 par 26 sans changer l’étiquette.
+
+En Python, on peut reproduire cette idée avec le code suivant:
+
+```python
+# On met la valeur 25 dans la boîte "age"
+age = 25
+
+# On affiche le contenu de la boîte "age"
+print(age)
+
+# On remplace la valeur 25 par 26
+age = 26
+```
+
+<Callout title="Commentaire">
+  Ne soyez pas surpris par les lignes qui commencent par `#`. Ce sont des
+  [commentaires](./glossary#commentaire) qui permettent d'expliquer le code sans
+  être exécutés. On les utilise très fréquemment pour rendre le code plus
+  lisible.
+</Callout>

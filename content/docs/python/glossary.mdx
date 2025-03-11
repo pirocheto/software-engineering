@@ -1,9 +1,13 @@
 ---
 title: Lexique
+icon: BookMarked
 description: "Lexique des termes liés au langage de programmation Python."
 metadata:
   bodyClass: glossary
 ---
+
+import { Callout } from "fumadocs-ui/components/callout"
+import CalloutExemple from "@/components/callout-exemple"
 
 <style>
   {`
@@ -19,7 +23,30 @@ metadata:
 
 Un argument est une valeur fournie à une [fonction](#fonction) ou à une [méthode](#méthode) lors de son appel. Les arguments sont utilisés pour passer des données à une fonction ou à une méthode afin qu'elle puisse les utiliser pour effectuer une tâche spécifique.
 
+<CalloutExemple>
+La fonction `print()` prend le texte `"Hello World"` comme argument :
+
+```python
+print("Hello World")
+```
+
+</CalloutExemple>
+
 ## C
+
+### commentaire
+
+Un commentaire est une annotation dans le code source d'un programme informatique qui n'est pas exécutée par l'ordinateur. Les commentaires sont utilisés pour expliquer le code, ajouter des notes, ou désactiver temporairement des parties du code. En Python, les commentaires commencent par le symbole `#`.
+
+<CalloutExemple>
+Voici un exemple de commentaire en Python :
+
+```python
+# Ceci est un commentaire
+print("Hello World")
+```
+
+</CalloutExemple>
 
 ### compilateur
 
@@ -33,6 +60,15 @@ Contrairement à un [interpréteur](#interpréteur), un compilateur traduit tout
 Une fonction est un bloc de code qui effectue une tâche spécifique lorsqu'elle est appelée. Les fonctions sont utilisées pour organiser le code en le divisant en tâches plus petites et plus gérables. Les fonctions peuvent accepter des [arguments](#argument) et renvoyer des valeurs.
 Plusieurs fonctions sont déjà disponibles dans Python, comme `print()` ou `len()`, mais il est possible de créer ses propres fonctions.
 
+<CalloutExemple>
+La fonction `print()` est utilisée pour afficher le texte `"Hello World"` :
+
+```python
+print("Hello World")
+```
+
+</CalloutExemple>
+
 ## I
 
 ### interpréteur
@@ -45,6 +81,19 @@ Vous optiendrez un [prompt](#prompt) `>>>` qui vous permettra d'écrire du code 
 
 Une instruction est une commande ou une action spécifique qui est exécutée par un programme informatique. Les instructions sont utilisées pour définir le comportement d'un programme et pour effectuer des tâches spécifiques, comme l'affectation de valeurs à des variables ou l'appel de fonctions.
 
+<CalloutExemple>
+Voici deux instructions Python :
+
+```python
+# Instruction 1 : Affectation de la valeur 42 à la variable "age"
+age = 42
+
+# Instruction 2 : Affichage de la valeur de la variable "age"
+print(age)
+```
+
+</CalloutExemple>
+
 ### IDE
 
 Un IDE (Integrated Development Environment) est un environnement de développement intégré qui regroupe plusieurs outils pour faciliter l'écriture, le débogage et le test de programmes informatiques. Les IDE sont souvent utilisés par les développeurs pour améliorer leur productivité et leur efficacité lors de l'écriture de code.
@@ -55,6 +104,19 @@ Exemple d'IDE populaires pour Python : PyCharm, Visual Studio Code
 ### méthode
 
 Une méthode est une fonction qui est associée à un objet spécifique. Les méthodes sont utilisées pour effectuer des opérations sur un objet ou pour interagir avec lui. En Python, les méthodes sont appelées en utilisant la notation pointée, par exemple `objet.methode()`.
+
+<CalloutExemple>
+La méthode `append()` est utilisée pour ajouter un élément à une liste :
+
+```python
+# Création d'une liste vide
+liste = []
+
+# Ajout de l'élément 42 à la liste
+liste.append(42)
+```
+
+</CalloutExemple>
 
 ## P
 
@@ -73,3 +135,18 @@ Un script est un fichier contenant une suite d'[instructions](#instruction) qui 
 ### terminal
 
 Un terminal est un programme informatique qui permet aux utilisateurs d'interagir avec un ordinateur en utilisant une interface en ligne de commande. Les utilisateurs peuvent saisir des commandes dans un terminal pour exécuter des programmes, naviguer dans le système de fichiers, et effectuer d'autres tâches.
+
+## V
+
+### variable
+
+Une variable est un conteneur pour stocker des données. Elle est utilisée pour stocker des valeurs pour une utilisation ultérieure dans un programme. Les variables peuvent contenir différents types de données, tels que des nombres, des chaînes de caractères, des listes, des dictionnaires, etc.
+
+<CalloutExemple>
+
+```python
+# On met la valeur 25 dans la variable "age"
+age = 25
+```
+
+</CalloutExemple>

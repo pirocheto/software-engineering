@@ -74,6 +74,11 @@ body {
   --grafana-color: hsl(21 91% 56.7%);
 }
 
+.reveal * {
+  /* color: var(--color-fd-primary); */
+  word-wrap: break-word;
+}
+
 /* [data-state="open"] {
   color: var(--color-fd-primary);
 } */
