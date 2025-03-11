@@ -4,6 +4,10 @@
 
 @source '../node_modules/fumadocs-ui/dist/**/*.js';
 
+article {
+  z-index: 0;
+}
+
 .python {
   --color-fd-primary: var(--python-color);
 }
