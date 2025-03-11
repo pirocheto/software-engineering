@@ -10,7 +10,7 @@ const Slides = () => {
   return (
     <DynamicSlides>
       <section>
-        <h2>Les variables</h2>
+        <h2 className="r-fit-text">Les variables</h2>
       </section>
       <section>
         <div className="flex flex-col items-center gap-6 ">
