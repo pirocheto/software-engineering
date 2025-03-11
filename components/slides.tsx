@@ -73,7 +73,7 @@ const Slides = ({ children, ...props }: SlidesProps) => {
   return (
     // Your presentation is sized based on the width and height of
     // our parent element. Make sure the parent is not 0-height.
-    <div className="h-100" {...props}>
+    <div className="h-50 md:h-100" {...props}>
       <div className="reveal" ref={deckDivRef}>
         <div className="slides">{children}</div>
       </div>
