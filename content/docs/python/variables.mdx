@@ -8,7 +8,7 @@ import Slides from "@/components/slides/variables"
 
 <Slides />
 
-## Qu'est-ce qu'une variable ?
+## Définition d'une variable
 
 En programmation, une variable est un conteneur pour stocker des données. Elle est utilisée pour stocker des valeurs pour une utilisation ultérieure dans un programme. Les variables peuvent contenir différents types de données, tels que des nombres, des chaînes de caractères, des listes, des dictionnaires, etc.
 
@@ -38,3 +38,166 @@ age = 26
   être exécutés. On les utilise très fréquemment pour rendre le code plus
   lisible.
 </Callout>
+
+Une variable est définie par:
+
+- un **nom** (par exemple `age`)
+- une **valeur** (par exemple `25`)
+- un **type** (par exemple `int` pour un entier).
+
+### Nommer une variable
+
+#### Règles de nomenclature
+
+Les noms de variables doivent respecter des règles de nomenclature imposées par la syntaxe du langage:
+
+- Le nom d'une variable doit commencer par une lettre (a-z, A-Z) ou un underscore (\_).
+- Le nom d'une variable ne peut pas commencer par un chiffre (0-9).
+- Le nom d'une variable ne peut contenir que des caractères alphanumériques et des underscores (a-z, A-Z, 0-9, \_).
+- Les noms de variables sont sensibles à la casse (par exemple, `age`, `Age` et `AGE` sont trois variables différentes).
+
+#### Conventions de nommage
+
+En plus de ces règles, il existe un ensemble de conventions de nommage que les développeurs suivent généralement pour rendre leur code plus lisible et maintenable:
+
+- Les noms de variables doivent être des noms significatifs qui décrivent la valeur qu'ils stockent.
+- Les noms de variables doivent être en minuscules avec des mots séparés par des underscores (snake_case).
+- Les noms de variables ne doivent pas être des mots-clés réservés par Python.
+- Les noms de variables doivent être courts et concis, mais suffisamment descriptifs pour comprendre leur rôle.
+
+Il est également recommandé d'utiliser l'anglais pour nommer les variables car c'est la langue dominante en programmation, ce qui facilite la compréhension et la collaboration internationale.
+De plus, la majorité des documentations et ressources sont en anglais, cela assure une consistance avec les bibliothèques et frameworks utilisés.
+
+Prenez ces habitudes dès le début pour écrire un code plus lisible et plus facile à maintenir.
+
+<Callout title="PEP 8">
+  Pour plus de détails sur les conventions de nommage, vous pouvez consulter le
+  [PEP 8](https://www.python.org/dev/peps/pep-0008/), qui est le guide de style
+  officiel de Python. [PEP 8](./glossary#pep-8) est une recommandation pour
+  écrire du code Python lisible et maintenable.
+</Callout>
+
+### Affectation de valeurs
+
+En Python, une variable est créée en lui affectant une valeur à l'aide de l'opérateur d'affectation `=`. L'opérateur d'affectation attribue la valeur à droite de l'opérateur à la variable à gauche de l'opérateur.
+
+```python
+# Création d'une variable "age" avec la valeur 25
+age = 25
+```
+
+Pour changer la valeur d'une variable, il suffit de réaffecter une nouvelle valeur à la variable existante:
+
+```python
+# Changement de la valeur de la variable "age" à 26
+age = 26
+```
+
+Vous lirez souvent des phrases comme "déclarer une variable", "initialiser une variable" ou "affecter une variable". Voici leurs significations:
+
+- **Déclarer une variable** signifie simplement la créer en lui donnant un nom.
+- **Initialiser une variable** signifie lui attribuer une valeur pour la première fois.
+- **Affecter une variable** signifie lui attribuer une nouvelle valeur après son initialisation.
+
+En Python, on combine souvent la déclaration et l'initialisation en une seule étape.
+Ne vous inquiétez pas trop de ces termes, ils sont souvent utilisés de manière interchangeable.
+
+### Afficher le contenu d'une variable
+
+Pour afficher le contenu d'une variable, on utilise la fonction `print()` qui affiche le contenu de la variable sur la console.
+
+```python
+# Affection de la valeur 42 à la variable "age"
+age = 42
+
+# Affichage de la valeur de la variable "age"
+print(age)
+
+# Affection de la valeur "Hello, World!" à la variable "message"
+message = "Hello, World!"
+
+# Affichage de la valauer de la variable "message"
+print(message)
+```
+
+### Types de données
+
+En Python, les variables peuvent contenir différents types de données, tels que des nombres, des chaînes de caractères, des listes, des dictionnaires, etc.
+Contrairement à certains langages de programmation, Python est un langage à typage dynamique, ce qui signifie que le type d'une variable est déterminé automatiquement en fonction de la valeur qui lui est affectée.
+Cela signifie que vous n'avez pas besoin de spécifier explicitement le type d'une variable lors de sa déclaration.
+
+#### Types de base
+
+Voici quelques types de données de base:
+
+| Nom                       | Type       | Description                                            |
+| ------------------------- | ---------- | ------------------------------------------------------ |
+| **Entiers**               | `int`      | nombres entiers sans décimales (par exemple, 42)       |
+| **Flottants**             | `float`    | nombres à virgule flottante (par exemple, 3.14)        |
+| **Chaînes de caractères** | `str`      | séquences de caractères (par exemple, "Hello, World!") |
+| **Booléens**              | `bool`     | valeurs logiques `True` ou `False`                     |
+| **None**                  | `NoneType` | valeur spéciale qui représente l'absence de valeur     |
+
+#### Exemples [!toc]
+
+Voici quelques exemples de variables avec différents types de données:
+
+```python
+# Entier
+age = 25
+
+# Flottant
+pi = 3.14
+
+# Chaîne de caractères
+message = "Hello, World!"
+
+# Booléen
+est_vrai = True
+
+# None
+vide = None
+```
+
+#### Structure de données
+
+En plus des types de données de base, Python prend en charge des structures de données plus complexes, telles que des listes, des tuples, des ensembles et des dictionnaires.
+
+| Nom               | Type    | Description                                                 |
+| ----------------- | ------- | ----------------------------------------------------------- |
+| **Listes**        | `list`  | collections ordonnées d'éléments modifiables et indexables  |
+| **Tuples**        | `tuple` | collections ordonnées d'éléments immuables et indexables    |
+| **Ensembles**     | `set`   | collections non ordonnées d'éléments uniques                |
+| **Dictionnaires** | `dict`  | collections d'éléments clé-valeur modifiables et indexables |
+
+#### Exemples [!toc]
+
+Voici quelques exemples de variables avec des structures de données plus complexes:
+
+```python
+# Liste
+nombres = [1, 2, 3, 4, 5]
+
+# Tuple
+coordonnees = (10, 20)
+
+# Ensemble
+couleurs = {"rouge", "vert", "bleu"}
+
+# Dictionnaire
+personne = {"nom": "Alice", "age": 30}
+```
+
+### Afficher le type d'une variable
+
+Pour obtenir le type d'une variable, on utilise la fonction `type()`.
+Cette fonction renvoie le type de données de la variable passée en [argument](./glossary#argument).
+On affiche ensuite le type de la variable à l'aide de la fonction `print()`.
+
+```python
+# Déclaration d'une variable "age" de type entier
+age = 25
+
+# Affichage du type de la variable "age"
+print(type(age))
+```
