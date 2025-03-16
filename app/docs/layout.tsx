@@ -16,7 +16,7 @@ export default async function Layout({
     ...baseOptions,
     // tree: source.pageTree[(await params).lang],
     tree: source.pageTree,
-    // links: linkItems,
+    links: linkItems,
     // containerProps: {
     //   className: "python",
     // },

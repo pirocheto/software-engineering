@@ -1,0 +1,347 @@
+---
+title: Types de données
+icon: Boxes
+description: "Types de données de base et structures de données en Python."
+---
+
+import { FaStar } from "react-icons/fa"
+import CalloutExemple from "@/components/callout-exemple"
+import { Callout } from "fumadocs-ui/components/callout"
+
+import Slides from "@/components/slides/types"
+
+<Slides />
+
+## Introduction
+
+Les types de données permettent de définir **le type de valeur que peut contenir une variable**. Par exemple, une variable peut contenir un nombre entier, un nombre à virgule flottante, une chaîne de caractères, un booléen, etc.
+Chaque type de données a ses propres caractéristiques et opérations qui lui sont associées.
+
+**Dans Python, les types sont déterminés automatiquement** en fonction de la valeur affectée à une variable. C'est ce qu'on appelle le [typage dynamique](./glossary#typage-dynamique).
+Vous n'avez donc pas besoin de spécifier explicitement le type d'une variable. Cela rend Python plus flexible et plus facile à utiliser.
+
+Néanmoins, il est important de comprendre les différents types disponibles car chacun d'entre eux s'utilise dans des rôles ou des contextes différents.
+Vous aurez souvent le choix entre plusieurs types pour représenter une valeur mais il n'y en aura généralement qu'un seul vraiment adapté.
+
+Les types permettent également à la machine de savoir comment stocker et manipuler les valeurs.
+Certains consomment plus de mémoire que d'autres, et certains sont plus rapides à manipuler que d'autres.
+En comprenant le fonctionnement de chaque type, vous écrirez des programmes plus efficaces.
+
+La page suivante présente certains des types les plus couramment utilisés. Il existe d'autres types plus avancés, mais ceux-ci sont suffisants pour la plupart des tâches courantes.
+Pour connaître la liste complète des types natifs disponibles en Python, vous pouvez consulter la [documentation officielle](https://docs.python.org/library/stdtypes.html).
+
+## Types numériques
+
+Parmi les types numériques, les entiers et les flottants sont sans doute les plus couramment utilisés.
+
+### Entier (`int`)
+
+les entiers sont utilisés pour représenter des quantités entières, des identifiants, des index, etc.
+Ils peuvent être positifs ou négatifs. Les opérations mathématiques de base (addition, soustraction, multiplication, division, etc) sont définies pour les entiers.
+
+<CalloutExemple>
+
+```python
+# Entier positif
+age = 42
+
+# Entier négatif
+temperature = -10
+
+# Valeur égale à 0
+compteur = 0
+
+# Opérations mathématiques
+somme = 10 + 5
+difference = 10 - 5
+produit = 10 * 5
+quotient =   10 / 5
+```
+
+</CalloutExemple>
+
+Vous pouvez convertir d'autres types de données en entiers en utilisant la fonction `int()`.
+
+<CalloutExemple>
+
+```python
+# Conversion d'un flottant en entier
+nombre = int(3.14)  # nombre vaut 3
+
+# Conversion d'une chaîne en entier
+age = int("42") # age vaut 42
+
+# Conversion d'une chaîne en entier (erreur)‡
+age = int("quarante-deux") # ValueError: invalid literal for int() with base 10: 'quarante-deux'
+
+```
+
+</CalloutExemple>
+
+### Flottant (`float`)
+
+Les flottants sont des **nombres à virgule flottante**.
+Ils sont utilisés pour représenter des valeurs réelles telles que des mesures, des probabilités, des coordonnées ou des taux.
+Tout comme les entiers, les flottants peuvent être positifs ou négatifs. Les opérations mathématiques de base sont également définies.
+
+<Callout type='info' title="Nombre décimaux VS flottants">
+Dans le langage courant, les nombres décimaux et les flottants sont souvent confondus, mais ils sont en réalité très différents.
+
+- Les nombres décimaux sont des nombres rationnels qui peuvent être représentés exactement en base 10 (par exemple, 0.1, 0.2, 0.5, etc).
+- Les flottants, en revanche, sont une représentation d'un nombre réel en base 2 (binaire) et ne peuvent pas toujours être représentés de manière exacte.
+
+**Pour faire simple, un nombre décimal est une notion mathématique exacte, alors qu’un nombre flottant est une approximation binaire utilisée en informatique pour stocker des nombres réels.**
+
+</Callout>
+
+<CalloutExemple>
+
+```python
+# Flottant positif
+pi = 3.14
+
+# Flottant négatif
+temperature = -10.5
+
+# Valeur égale à 0
+zero = 0.0
+
+# Opérations mathématiques
+somme = 10.5 + 5.3
+difference = 10.5 - 5.3
+produit = 10.5 * 5.3
+quotient = 10.5 / 5.3
+```
+
+</CalloutExemple>
+
+Vous pouvez convertir d'autres types de données en flottants en utilisant la fonction `float()`.
+
+<CalloutExemple>
+
+```python
+# Conversion d'un entier en flottant
+nombre = float(42)  # nombre vaut 42.0
+
+# Conversion d'une chaîne en flottant
+age = float("42") # age vaut 42.0
+
+# Conversion d'une chaîne en flottant (erreur)
+pi = float("trois point un quatre") # ValueError: could not convert string to float: 'trois point un quatre'
+```
+
+</CalloutExemple>
+
+## Boléen (`bool`)
+
+Les booléens sont des valeurs logiques qui peuvent être `True` (vrai) ou `False` (faux).
+Ils sont utilisés pour représenter des conditions, des états, des résultats de tests, etc.
+Les opérations logiques de base (ET, OU, NON) sont définies pour les booléens.
+
+<CalloutExemple>
+
+```python
+# Booléen vrai
+est_vrai = True
+
+# Booléen faux
+est_faux = False
+```
+
+</CalloutExemple>
+
+Les boléens sont souvent utilisés en conjonction avec les opérateurs logiques.
+
+<CalloutExemple>
+
+```python
+# Opérateur ET
+resultat_et = True and False  # resultat_et vaut False
+
+# Opérateur OU
+resultat_ou = True or False  # resultat_ou vaut True
+
+# Opérateur NON
+resultat_non = not True  # resultat_non vaut False
+```
+
+</CalloutExemple>
+
+## Chaîne de caractères (`str`)
+
+Les chaînes de caractères sont des séquences de caractères.
+Elles sont utilisées pour représenter du texte, des noms, des messages, etc.
+Les chaînes de caractères sont délimitées par des guillemets simples (`'`) ou doubles (`"`).
+
+<CalloutExemple>
+
+```python
+# Chaîne de caractères simple
+message = "Hello, World!"
+
+# Chaîne de caractères multiligne
+poeme = """Roses are red,
+Violets are blue,
+Sugar is sweet,
+And so are you."""
+```
+
+</CalloutExemple>
+
+Les chaînes de caractères peuvent être concaténées (c'est-à-dire combinées) à l'aide de l'opérateur `+`.
+
+<CalloutExemple>
+
+```python
+# Concaténation de chaînes de caractères
+prenom = "John"
+nom = "Doe"
+nom_complet = prenom + " " + nom  # nom_complet vaut "John Doe"
+```
+
+</CalloutExemple>
+
+Les chaînes de caractères peuvent également être converties en majuscules ou en minuscules.
+
+<CalloutExemple>
+
+```python
+# Conversion en majuscules
+message = "hello, world!"
+
+# Conversion en minuscules
+message = message.upper()  # message vaut "HELLO, WORLD!"
+
+# Conversion en minuscules
+message = message.lower()  # message vaut "hello, world!"
+```
+
+</CalloutExemple>
+
+## Valeur nulle (`None`)
+
+La valeur `None` est une valeur spéciale qui représente l'absence de valeur.
+Elle est souvent utilisée pour initialiser des variables ou pour indiquer qu'une fonction ne renvoie rien.
+Intuitivement, `None` est équivalent à "rien" ou "vide".
+
+<CalloutExemple>
+
+```python
+# Initialisation d'une variable
+vide = None
+
+```
+
+</CalloutExemple>
+
+## Types de données composés
+
+En plus des types de données de base, Python propose des types de données composés qui permettent de stocker plusieurs valeurs dans une seule variable.
+
+Les types de données composés les plus couramment utilisés sont les listes, les tuples, les ensembles et les dictionnaires.
+
+### Liste (`list`)
+
+Les listes sont des collections ordonnées d'éléments.
+Elles sont modifiables, indexables et peuvent contenir des éléments de différents types.
+Les listes sont délimitées par des crochets `[]`.
+
+<CalloutExemple>
+
+```python
+# Liste de nombres
+nombres = [1, 2, 3, 4, 5]
+
+# Liste de chaînes de caractères
+prenoms = ["Alice", "Bob", "Charlie"]
+
+# Liste mixte
+mixte = [1, "Alice", True]
+```
+
+</CalloutExemple>
+
+### Tuple (`tuple`)
+
+Les tuples sont des collections ordonnées d'éléments.
+
+Ils sont similaires aux listes, mais ils sont [immuables](./glossary#immuable), c'est-à-dire qu'ils ne peuvent pas être modifiés une fois créés.
+Les tuples sont délimités par des parenthèses `()`.
+Les tuples sont souvent utilisés pour représenter des enregistrements ou des coordonnées.
+
+<CalloutExemple>
+
+```python
+# Tuple de coordonnées
+point = (3, 4)
+
+# Tuple de coordonnées nommées
+coordonnees = ("latitude", 48.85, "longitude", 2.35)
+```
+
+</CalloutExemple>
+
+### Ensemble (`set`)
+
+Les ensembles sont des collections non ordonnées d'éléments uniques.
+Ils sont utilisés pour stocker des ensembles d'éléments distincts sans se soucier de l'ordre.
+Les ensembles sont délimités par des accolades `{}`.
+
+<CalloutExemple>
+
+```python
+# Ensemble de couleurs
+couleurs = {"rouge", "vert", "bleu"}
+
+# Ensemble de nombres
+nombres = {1, 2, 3, 4, 5}
+```
+
+</CalloutExemple>
+
+### Dictionnaire (`dict`)
+
+Les dictionnaires sont des collections d'éléments clé-valeur.
+Ils sont utilisés pour stocker des paires de clés et de valeurs associées.
+Les dictionnaires sont modifiables, indexables et peuvent contenir des éléments de différents types.
+Les dictionnaires sont délimités par des accolades `{}` et les paires clé-valeur sont séparées par des deux-points `:`.
+Les clés doivent être uniques.
+
+<CalloutExemple>
+
+```python
+# Dictionnaire de personne
+personne = {
+    "nom": "Alice",
+    "age": 30,
+    "ville": "Paris"
+}
+
+# Dictionnaire de configuration
+configuration = {
+    "taille": 1024,
+    "couleur": "rouge",
+    "actif": True
+}
+```
+
+</CalloutExemple>
+
+Les types de données composés sont très utiles pour organiser et manipuler des données complexes.
+Ils vous permettent de regrouper des valeurs connexes et de les traiter de manière cohérente.
+
+## Récapituatif
+
+| Nom          | Type    | Description                                              | Utilisation                                                        |
+| ------------ | ------- | -------------------------------------------------------- | ------------------------------------------------------------------ |
+| Entier       | `int`   | Nombres entiers (positifs, négatifs ou zéro).            | Représenter des quantités, des index ou des identifiants.          |
+| Flottant     | `float` | Nombres à virgule flottante (valeurs réelles).           | Représenter des mesures, des coordonnées ou des valeurs continues. |
+| Booléen      | `bool`  | Valeurs logiques (`True` ou `False`).                    | Représenter des conditions ou des états logiques.                  |
+| Chaîne       | `str`   | Chaînes de caractères (texte).                           | Manipuler du texte, des noms ou des messages.                      |
+| Nulle        | `None`  | Valeur spéciale représentant l'absence de valeur.        | Initialiser des variables ou indiquer l'absence de résultat.       |
+| Liste        | `list`  | Collection ordonnée et modifiable d'éléments.            | Stocker et manipuler des collections d'éléments.                   |
+| Tuple        | `tuple` | Collection ordonnée et immuable d'éléments.              | Représenter des enregistrements ou des coordonnées.                |
+| Ensemble     | `set`   | Collection non ordonnée d'éléments uniques.              | Stocker des ensembles d'éléments distincts.                        |
+| Dictionnaire | `dict`  | Collection clé-valeur pour stocker des paires associées. | Associer des clés uniques à des valeurs correspondantes.           |
+
+Pour connaître les autres types de données disponibles consultez la [documentation officielle](https://docs.python.org/library/stdtypes.html).
