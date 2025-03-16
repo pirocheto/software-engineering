@@ -1,5 +1,5 @@
 ---
-title: Types de données
+title: Types
 icon: Boxes
 description: "Types de données de base et structures de données en Python."
 ---
@@ -328,3 +328,17 @@ Ils vous permettent de regrouper des valeurs connexes et de les traiter de mani�
 | Dictionnaire | `dict`  | Collection clé-valeur pour stocker des paires associées. | Associer des clés uniques à des valeurs correspondantes.      |
 
 Pour connaître les autres types de données disponibles consultez la [documentation officielle](https://docs.python.org/library/stdtypes.html).
+
+## Afficher le type d'une variable
+
+Pour obtenir le type d'une variable, on utilise la fonction `type()`.
+Cette fonction renvoie le type de données de la variable passée en [argument](./glossary#argument).
+On affiche ensuite le type de la variable à l'aide de la fonction `print()`.
+
+```python
+# Déclaration d'une variable "age" de type entier
+age = 25
+
+# Affichage du type de la variable "age"
+print(type(age)) # <class 'int'>
+```
