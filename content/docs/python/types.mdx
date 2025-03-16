@@ -170,7 +170,7 @@ resultat_non = not True  # resultat_non vaut False
 ## Chaîne de caractères (`str`)
 
 Les chaînes de caractères sont des séquences de caractères.
-Elles sont utilisées pour représenter du texte, des noms, des messages, etc.
+Elles sont utilisées pour représenter n'importe quelle forme de texte, tel que des mots, des messages ou des instructions.
 Les chaînes de caractères sont délimitées par des guillemets simples (`'`) ou doubles (`"`).
 
 <CalloutExemple>
@@ -197,23 +197,6 @@ Les chaînes de caractères peuvent être concaténées (c'est-à-dire combinée
 prenom = "John"
 nom = "Doe"
 nom_complet = prenom + " " + nom  # nom_complet vaut "John Doe"
-```
-
-</CalloutExemple>
-
-Les chaînes de caractères peuvent également être converties en majuscules ou en minuscules.
-
-<CalloutExemple>
-
-```python
-# Conversion en majuscules
-message = "hello, world!"
-
-# Conversion en minuscules
-message = message.upper()  # message vaut "HELLO, WORLD!"
-
-# Conversion en minuscules
-message = message.lower()  # message vaut "hello, world!"
 ```
 
 </CalloutExemple>
@@ -332,16 +315,16 @@ Ils vous permettent de regrouper des valeurs connexes et de les traiter de mani�
 
 ## Récapituatif
 
-| Nom          | Type    | Description                                              | Utilisation                                                        |
-| ------------ | ------- | -------------------------------------------------------- | ------------------------------------------------------------------ |
-| Entier       | `int`   | Nombres entiers (positifs, négatifs ou zéro).            | Représenter des quantités, des index ou des identifiants.          |
-| Flottant     | `float` | Nombres à virgule flottante (valeurs réelles).           | Représenter des mesures, des coordonnées ou des valeurs continues. |
-| Booléen      | `bool`  | Valeurs logiques (`True` ou `False`).                    | Représenter des conditions ou des états logiques.                  |
-| Chaîne       | `str`   | Chaînes de caractères (texte).                           | Manipuler du texte, des noms ou des messages.                      |
-| Nulle        | `None`  | Valeur spéciale représentant l'absence de valeur.        | Initialiser des variables ou indiquer l'absence de résultat.       |
-| Liste        | `list`  | Collection ordonnée et modifiable d'éléments.            | Stocker et manipuler des collections d'éléments.                   |
-| Tuple        | `tuple` | Collection ordonnée et immuable d'éléments.              | Représenter des enregistrements ou des coordonnées.                |
-| Ensemble     | `set`   | Collection non ordonnée d'éléments uniques.              | Stocker des ensembles d'éléments distincts.                        |
-| Dictionnaire | `dict`  | Collection clé-valeur pour stocker des paires associées. | Associer des clés uniques à des valeurs correspondantes.           |
+| Nom          | Type    | Description                                              | Exemple d'utilisation                                         |
+| ------------ | ------- | -------------------------------------------------------- | ------------------------------------------------------------- |
+| Entier       | `int`   | Nombres entiers (positifs, négatifs ou zéro).            | Représenter des quantités, des index ou des identifiants.     |
+| Flottant     | `float` | Nombres à virgule flottante (valeurs réelles).           | Représenter des mesures, des probabilités ou des coordonnées. |
+| Booléen      | `bool`  | Valeurs logiques (`True` ou `False`).                    | Représenter des conditions ou des états logiques.             |
+| Chaîne       | `str`   | Chaînes de caractères (texte).                           | Manipuler du texte, des noms ou des messages.                 |
+| Nulle        | `None`  | Valeur spéciale représentant l'absence de valeur.        | Initialiser des variables ou indiquer l'absence de résultat.  |
+| Liste        | `list`  | Collection ordonnée et modifiable d'éléments.            | Stocker et manipuler des collections d'éléments.              |
+| Tuple        | `tuple` | Collection ordonnée et immuable d'éléments.              | Représenter des enregistrements ou des coordonnées.           |
+| Ensemble     | `set`   | Collection non ordonnée d'éléments uniques.              | Stocker des ensembles d'éléments distincts.                   |
+| Dictionnaire | `dict`  | Collection clé-valeur pour stocker des paires associées. | Associer des clés uniques à des valeurs correspondantes.      |
 
 Pour connaître les autres types de données disponibles consultez la [documentation officielle](https://docs.python.org/library/stdtypes.html).
