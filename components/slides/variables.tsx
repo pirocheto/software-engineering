@@ -45,40 +45,6 @@ const Slides = () => {
           </code>
         </pre>
       </section>
-      <section>
-        <p>Ses types basiques sont</p>
-        <table className="table-auto">
-          <thead>
-            <tr>
-              <th>Type</th>
-              <th>Description</th>
-              <th>Exemple</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>int</td>
-              <td>Entier</td>
-              <td>25</td>
-            </tr>
-            <tr>
-              <td>float</td>
-              <td>Nombre à virgule</td>
-              <td>25.0</td>
-            </tr>
-            <tr>
-              <td>str</td>
-              <td>Chaine de caractères</td>
-              <td>"25"</td>
-            </tr>
-            <tr>
-              <td>bool</td>
-              <td>Booléen</td>
-              <td>True</td>
-            </tr>
-          </tbody>
-        </table>
-      </section>
     </DynamicSlides>
   )
 }
