@@ -4,6 +4,7 @@ import { createElement } from "react"
 import { icons } from "lucide-react"
 import * as FaIcons from "react-icons/fa"
 import * as SiIcons from "react-icons/si"
+import * as TbIcons from "react-icons/tb"
 import { createMDXSource } from "fumadocs-mdx"
 import { i18n } from "@/lib/i18n"
 
@@ -18,6 +19,8 @@ export const source = loader({
       return createElement(FaIcons[icon as keyof typeof FaIcons])
     if (icon && icon in SiIcons)
       return createElement(SiIcons[icon as keyof typeof SiIcons])
+    if (icon && icon in TbIcons)
+      return createElement(TbIcons[icon as keyof typeof TbIcons])
   },
 })
 

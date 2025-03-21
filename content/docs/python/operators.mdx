@@ -1,0 +1,196 @@
+---
+title: Opérateurs
+icon: TbPlusEqual
+description: "Les opérateurs permettent de réaliser des opérations sur des valeurs."
+---
+
+Cette page recense les opérateurs les plus couramment utilisés.
+Pour consulter la liste complète des opérateurs en Python, vous pouvez vous référer à la [documentation officielle](https://docs.python.org/3/library/operator.html).
+
+## Opérateurs arithmétiques
+
+Les opérateurs arithmétiques sont utilisés pour effectuer des opérations mathématiques sur des valeurs numériques.
+
+| Opérateur | Description      | Exemple  | Résultat |
+| --------- | ---------------- | -------- | -------- |
+| `+`       | Addition         | `5 + 3`  | `8`      |
+| `-`       | Soustraction     | `10 - 4` | `6`      |
+| `*`       | Multiplication   | `6 * 3`  | `18`     |
+| `/`       | Division         | `8 / 2`  | `4.0`    |
+| `//`      | Division entière | `8 // 3` | `2`      |
+| `%`       | Modulo (reste)   | `10 % 3` | `1`      |
+| `**`      | Exponentiation   | `2 ** 3` | `8`      |
+
+<Callout type="warn">
+  La division (`/`) renvoie toujours un nombre à virgule flottante (`float`).
+  Pour obtenir un résultat entier, utilisez la division entière (`//`).
+
+    ```python
+    division = 8 / 2
+    print(division)  # 4.0
+
+    division_entiere = 8 // 2
+    print(division_entiere)  # 4
+    ```
+
+</Callout>
+
+```python
+addition = 5 + 3
+print(addition)  # 8
+
+soustraction = 10 - 4
+print(soustraction)  # 6
+
+multiplication = 6 * 3
+print(multiplication)  # 18
+```
+
+Les opérateurs arithmétiques suivent les règles de priorité mathématique standard. Les parenthèses peuvent être utilisées pour changer l'ordre d'évaluation.
+
+```python
+result = 5 + 3 * 2
+print(result)  # 11
+
+result = (5 + 3) * 2
+print(result)  # 16
+```
+
+### Avec les chaînes de caractères [!toc]
+
+Certains opérateurs arithmétiques peuvent également être utilisés avec des chaînes de caractères. Mais ils ont une signification différente.
+
+| Opérateur | Description   | Exemple                   | Résultat            |
+| --------- | ------------- | ------------------------- | ------------------- |
+| `+`       | Concaténation | `"Hello" + " " + "World"` | `"Hello World"`     |
+| `*`       | Répétition    | `"Hello" * 3`             | `"HelloHelloHello"` |
+
+```python
+concatenation = "Hello" + " " + "World"
+print(concatenation)  # Hello World
+
+
+repetition = "Hello" * 3
+print(repetition)  # HelloHelloHello
+```
+
+## Opérateurs d'affectation
+
+L'opérateur d'affectation (`=`) est utilisé pour attribuer une valeur à une variable.
+Combiner l'opérateur d'affectation avec un opérateur arithmétique permet de raccourcir le code.
+
+| Opérateur | Description      | Exemple   | Résultat |
+| --------- | ---------------- | --------- | -------- |
+| `=`       | Affectation      | `x = 5`   | `5`      |
+| `+=`      | Addition         | `x += 3`  | `8`      |
+| `-=`      | Soustraction     | `x -= 3`  | `2`      |
+| `*=`      | Multiplication   | `x *= 3`  | `15`     |
+| `/=`      | Division         | `x /= 3`  | `1.6667` |
+| `//=`     | Division entière | `x //= 3` | `1`      |
+| `%=`      | Modulo           | `x %= 3`  | `2`      |
+| `**=`     | Exponentiation   | `x **= 3` | `125`    |
+
+```python
+x = 5
+x += 3    # équivaut à x = x + 3
+print(x)  # 8
+```
+
+## Opérateurs de comparaison
+
+Ces opérateurs comparent deux valeurs et renvoient un booléen (True ou False). Ils sont souvent utilisés dans les instructions conditionnelles pour prendre des décisions.
+
+| Opérateur | Description       | Exemple  | Résultat |
+| --------- | ----------------- | -------- | -------- |
+| `==`      | Égalité           | `5 == 5` | `True`   |
+| `!=`      | Différence        | `5 != 3` | `True`   |
+| `>`       | Supérieur         | `5 > 3`  | `True`   |
+| `<`       | Inférieur         | `5 < 3`  | `False`  |
+| `>=`      | Supérieur ou égal | `5 >= 5` | `True`   |
+| `<=`      | Inférieur ou égal | `5 <= 3` | `False`  |
+
+<Callout type="warn" title="Attention">
+  L'opérateur d'égalité est `==` (deux signes égaux). Un seul signe égal (`=`)
+  est utilisé pour l'[affectation](./variables#affectation-de-valeur).
+</Callout>
+
+## Opérateurs logiques
+
+Les opérateurs logiques sont utilisés pour combiner des expressions booléennes.
+
+| Opérateur | Description | Exemple          | Résultat |
+| --------- | ----------- | ---------------- | -------- |
+| `and`     | ET logique  | `True and False` | `False`  |
+| `or`      | OU logique  | `True or False`  | `True`   |
+| `not`     | NON logique | `not True`       | `False`  |
+
+Ils sont souvent utilisés en combinaison avec les opérateurs de comparaison pour réaliser des conditions plus complexes.
+
+```python
+result = (5 > 3) and (5 < 10)
+print(result)  # True
+```
+
+## Opérateurs d'appartenance
+
+Les opérateurs d'appartenance sont utilisés pour vérifier si une valeur est présente dans une séquence.
+
+| Opérateur | Description | Exemple              | Résultat |
+| --------- | ----------- | -------------------- | -------- |
+| `in`      | Présent     | `2 in [1, 2, 3]`     | `True`   |
+| `not in`  | Absent      | `4 not in [1, 2, 3]` | `True`   |
+
+Ils fonctionnent de la même manière avec les listes, les tuples, et les ensembles.
+
+```python
+# Avec les listes
+nombres = [1, 2, 3]
+result = 2 in nombres
+print(result)  # True
+
+# Avec les tuples
+voyelles = ("a", "e", "i", "o", "u")
+result = "y" in voyelles
+print(result)  # False
+
+# Avec les ensembles
+fruits = {"apple", "banana", "cherry"}
+result = "orange" not in fruits
+print(result)  # True
+```
+
+### Avec les dictionnaires [!toc]
+
+Avec les dictionnaires, les opérateurs d'appartenance vérifient la présence de clés.
+
+| Opérateur | Description  | Exemple                          | Résultat |
+| --------- | ------------ | -------------------------------- | -------- |
+| `in`      | Clé présente | `"name" in {"name": "Alice"}`    | `True`   |
+| `not in`  | Clé absente  | `"age" not in {"name": "Alice"}` | `True`   |
+
+```python
+personne = {"name": "Alice", "age": 25}
+result = "name" in personne
+print(result)  # True
+```
+
+### Avec les chaînes de caractères [!toc]
+
+Avec les chaînes de caractères, les opérateurs d'appartenance vérifient la présence de sous-chaînes.
+
+| Opérateur | Description | Exemple                         | Résultat |
+| --------- | ----------- | ------------------------------- | -------- |
+| `in`      | Présent     | `"Hello" in "Hello World"`      | `True`   |
+| `not in`  | Absent      | `"Python" not in "Hello World"` | `True`   |
+
+```python
+chaine = "Hello World"
+
+result = "Hello" in chaine
+print(result)  # True
+
+result = "Python" not in chaine
+print(result)  # True
+```
+
+Pour consulter la liste complète des opérateurs en Python, vous pouvez vous référer à la [documentation officielle](https://docs.python.org/3/library/operator.html).
