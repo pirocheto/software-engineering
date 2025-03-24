@@ -1,0 +1,111 @@
+---
+title: Conditions
+icon: ArrowLeftRight
+description: "Les conditions permettent de contrôler le flux d'exécution d'un programme."
+---
+
+Les conditions en Python permettent de prendre des décisions dans un programme en fonction de certaines conditions. On utilise des **instructions conditionnelles** pour exécuter un bloc de code si une condition est vraie, ou un autre bloc de code si la condition est fausse.
+
+## Instructions conditionnelles
+
+### `if` (Si)
+
+Une condition est réalisée avec l'instruction `if` (si).
+Elle vérifie si une condition est vraie, et exécute le bloc de code associé si c'est le cas.
+
+Les [opérateurs de comparaison](./operators#opérateurs-de-comparaison) sont donc souvent utilisés en conjonction avec les instructions conditionnelles.
+
+```python
+age = 18
+
+if age >= 18:
+    print("Vous êtes majeur.")
+```
+
+Ce code se lit : "Si l'âge est supérieur ou égal à 18, alors afficher 'Vous êtes majeur.'".
+
+### `elif` (Sinon si)
+
+Pour gérer plusieurs conditions, on peut utiliser l'instruction `elif` (sinon si) pour ajouter des conditions supplémentaires.
+
+```python
+age = 18
+
+if age > 18:
+    print("Vous êtes majour.")
+elif age == 18:
+    print("Vous avez tout juste 18 ans.")
+```
+
+Il est possible d'ajouter autant de blocs `elif` que nécessaire pour gérer toutes les conditions possibles.
+
+```python
+age = 18
+
+if age > 18:
+    print("Vous êtes majour.")
+elif age == 18:
+    print("Vous avez tout juste 18 ans.")
+elif age < 18:
+    print("Vous êtes mineur.")
+```
+
+Ce code se lit : "Si l'âge est supérieur à 18, afficher 'Vous êtes majeur.' Sinon, si l'âge est égal à 18, afficher 'Vous avez tout juste 18 ans.' Sinon, si l'âge est inférieur à 18, afficher 'Vous êtes mineur.'".
+
+### `else` (Sinon)
+
+L'instruction `else` (sinon) est utilisée pour exécuter un bloc de code si aucune des conditions précédentes n'est vraie.
+
+```python
+age = 18
+
+if age > 18:
+    print("Vous êtes majour.")
+elif age == 18:
+    print("Vous avez tout juste 18 ans.")
+else:
+    print("Vous êtes mineur.")
+```
+
+Ce code se lit : "Si l'âge est supérieur à 18, afficher 'Vous êtes majeur.' Sinon, si l'âge est égal à 18, afficher 'Vous avez tout juste 18 ans.' Sinon, afficher 'Vous êtes mineur.'".
+
+Remarquez la différence avec l'exemple précédent: L'instruction `else` n'a pas de condition, elle est exécutée si aucune des conditions précédentes n'est vraie.
+
+## Combinaison de conditions
+
+Il est possible de combiner plusieurs conditions en utilisant les [opérateurs logiques](./operators#opérateurs-de-comparaison) `and`, `or` et `not`.
+
+```python
+age = 18
+ville = "Paris"
+
+if age >= 18 and ville == "Paris":
+    print("Vous êtes majeur et vous habitez à Paris.")
+```
+
+Ce code se lit : "Si l'âge est supérieur ou égal à 18 **et** que la ville est 'Paris', alors afficher 'Vous êtes majeur et vous habitez à Paris.'".
+
+N'oubliez pas l'[évaluation paresseuse](./operators#opérateurs-logiques) des opérateurs logiques lors de la combinaison de conditions.
+
+## Imbrication de conditions
+
+Il est possible d'imbriquer des conditions en plaçant une instruction conditionnelle à l'intérieur d'une autre.
+
+```python
+age = 18
+ville = "Paris"
+
+if age >= 18:
+    if ville == "Paris":
+        print("Vous êtes majeur et vous habitez à Paris.")
+    else:
+        print("Vous êtes majeur mais vous n'habitez pas à Paris.")
+```
+
+## Tableau récapitulatif
+
+| Instruction | Signification | Description                                                               |
+| ----------- | ------------- | ------------------------------------------------------------------------- |
+| `if`        | Si            | Vérifie si une condition est vraie et exécute le bloc de code associé.    |
+| `elif`      | Sinon si      | Ajoute une condition supplémentaire si la précédente est fausse.          |
+| `else`      | Sinon         | Exécute un bloc de code si aucune des conditions précédentes n'est vraie. |

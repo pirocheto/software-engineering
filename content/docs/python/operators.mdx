@@ -131,6 +131,22 @@ result = (5 > 3) and (5 < 10)
 print(result)  # True
 ```
 
+<Callout type="info" title="Évaluation Paresseuse">
+  Les opérateurs logiques `and` et `or` ont un comportement particulier appelé
+  **évaluation paresseuse** (short-circuit evaluation.
+
+- `and`: L'opérateur `and` retourne `False` dès qu'il rencontre une
+  expression évaluée à False. Les expressions suivantes ne sont pas évaluées. Si
+  une des conditions est `False`, le résultat de `and` sera toujours `False`,
+  donc il est inutile de vérifier les autres conditions.
+
+- `or`: L'opérateur `or` retourne `True` dès qu'il rencontre une expression
+  évaluée à True. Les expressions suivantes ne sont pas évaluées. Si une des
+  conditions est `True`, le résultat de `or` sera toujours `True`, donc il est
+  inutile de vérifier les autres conditions.
+
+</Callout>
+
 ## Opérateurs d'appartenance
 
 Les opérateurs d'appartenance sont utilisés pour vérifier si une valeur est présente dans une séquence.
