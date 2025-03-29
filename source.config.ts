@@ -22,7 +22,12 @@ export const projectPosts = defineCollections({
   // add required frontmatter properties
   schema: frontmatterSchema.extend({
     author: z.string(),
+    image: z.string().optional(),
     date: z.string().date().or(z.date()),
+    tags: z
+      .array(z.string())
+      .optional()
+      .transform((tags) => tags?.map((tag) => tag.toLowerCase())),
   }),
 })
 

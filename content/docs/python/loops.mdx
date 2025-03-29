@@ -1,0 +1,292 @@
+---
+title: Boucles
+icon: RefreshCcw
+description: "Les boucles permettent de répéter un bloc de code plusieurs fois."
+---
+
+Les boucles permettent d'exécuter un bloc de code plusieurs fois, tant qu'une condition est vraie ou pour chaque élément d'une séquence (comme une liste ou une chaîne de caractères).
+Elles sont utiles pour automatiser des tâches répétitives et simplifier le code.
+
+Il existe deux types principaux de boucles en Python : `for` et `while`.
+
+## Boucle `for`
+
+La boucle `for` est utilisée pour itérer sur une séquence (comme une liste, un tuple ou une chaîne de caractères) ou sur un objet itérable. Elle exécute un bloc de code pour chaque élément de la séquence.
+Elle est utilisée avec l'opérateur `in` pour parcourir les éléments d'une séquence.
+
+```python
+for element in sequence:
+    # Bloc de code à exécuter pour chaque élément
+```
+
+Elle se lit : "Pour chaque élément dans la séquence, exécutez le bloc de code".s
+
+### Liste, tuple ou un ensemble
+
+La boucle `for` peut être utilisée pour itérer sur une liste, un tuple ou un ensemble. Le comportement est identique pour ces trois types de séquences.
+
+```python
+fruits = ["pomme", "banane", "cerise"]
+
+for fruit in fruits:
+    print(fruit)
+
+# Output:
+# pomme
+# banane
+# cerise
+```
+
+Vous pouvez ajouter autant d'instructions que nécessaire dans le bloc de code de la boucle `for`. Par exemple, vous pouvez effectuer des calculs ou manipuler les éléments de la séquence.
+
+```python
+nombres = [1, 2, 3]
+
+for nombre in nombres:
+    carre = nombre ** 2
+    print(carre)
+
+# Output:
+# 1
+# 4
+# 9
+```
+
+### Chaîne de caractères
+
+Sur une chaîne de caractères, la boucle `for` itère sur chaque caractère de la chaîne :
+
+```python
+chaine = "Bonjour"
+
+for caractere in chaine:
+    print(caractere)
+
+# Output:
+# B
+# o
+# n
+# j
+# o
+# u
+# r
+```
+
+### Dictionnaire
+
+La boucle `for` peut également être utilisée pour itérer sur les clés d'un dictionnaire. Par défaut, elle itère sur les clés.
+
+```python
+personne = {"nom": "Alice", "age": 25}
+for cle in personne:
+    print(cle)
+
+# Output:
+# nom
+# age
+```
+
+Vous pouvez également utiliser la méthode `items()` pour obtenir à la fois les clés et les valeurs.
+
+```python
+personne = {"nom": "Alice", "age": 25}
+
+for cle, valeur in personne.items():
+    prin(cle, ':', valeur)
+
+# Output:
+# nom : Alice
+# age : 25
+```
+
+De manière génrérale, la boucle `for` est utilisable avec tous les objets itérables.
+Un objet itérable est un objet qui peut être parcouru élément par élément.
+Les chaînes de caractères, les listes, les tuples, les ensembles et les dictionnaires sont tous des objets itérables.
+Vous pouvez également créer vos propres objets itérables en définissant une méthode `__iter__()` dans votre [classe](./oop#classe).
+
+## Boucle `while`
+
+La boucle `while` exécute un bloc de code tant qu'une condition est vraie. Elle est utile lorsque vous ne savez pas à l'avance combien de fois vous devez répéter le bloc de code.
+Elle est donc utilisé en conjonction avec les [opérateurs de comparaison](./operators#opérateurs-de-comparaison) pour vérifier la condition.
+
+```python
+while condition:
+    # Bloc de code à exécuter tant que la condition est vraie
+```
+
+Elle se lit : "Tant que la condition est vraie, exécutez le bloc de code".
+
+```python
+compteur = 0
+
+while compteur < 5:
+    print(compteur)
+    compteur += 1
+
+# Output:
+# 0
+# 1
+# 2
+# 3
+# 4
+```
+
+Voici un exemple plus complexe:
+
+```python
+fruits_disponibles = ["pomme", "banane", "cerise", "orange", "kiwi"]
+panier = []
+
+fruits_requis = 3
+
+while len(panier) < fruits_requis:
+    fruit = fruits_disponibles.pop(0)         # Retire le premier fruit de la liste
+    panier.append(fruit)                      # Ajoute le fruit au panier
+
+print("fruits disponibles:", fruits_disponibles)
+print("Panier:", panier)
+
+# Output:
+# fruits disponibles: ['orange', 'kiwi']
+# Panier: ['pomme', 'banane', 'cerise']
+```
+
+Si la condition de la boucle `while` est toujours vraie, la boucle continuera indéfiniment, ce qui peut entraîner un blocage du programme. Il est donc important de s'assurer que la condition finira par devenir fausse à un moment donné.
+
+```python
+compteur = 0
+
+while compteur < 5:
+    print(compteur)
+    # Oublie d'incrémenter le compteur
+```
+
+Ici le compteur n'est jamais incrémenté, donc la boucle continuera indéfiniment car `compteur` sera toujours inférieur à 5.
+
+<Callout type="info" title="info">
+  Sachez que toute variable ou objet peut être utilisé dans une condition de
+  boucle `while`, tant qu'il est évalué à `True` ou `False`. Par exemple, une
+  liste vide est évaluée à `False`, tandis qu'une liste non vide est évaluée à
+  `True`. De même pour les chaînes de caractères, les tuples, etc.
+</Callout>
+
+## L'instruction `break`
+
+Le mot-clé `break` est utilisé pour sortir d'une boucle prématurément. Il peut être utilisé à l'intérieur d'une boucle `for` ou `while` pour arrêter l'exécution de la boucle lorsque certaines conditions sont remplies.
+
+### Avec `for`: [!toc]
+
+```python
+nombres = [1, 2, 3, 4, 5]
+
+for nombre in nombres:
+    print(nombre)
+    if nombre == 3:
+        break
+
+# Output:
+# 1
+# 2
+# 3
+```
+
+### Avec `while` : [!toc]
+
+```python
+compteur = 0
+
+while compteur < 5:
+    print(compteur)
+    if compteur == 3:
+        break
+    compteur += 1
+# Output:
+# 0
+# 1
+# 2
+# 3
+```
+
+Dans ces exemples, la boucle s'arrête dès que la condition `nombre == 3` ou `compteur == 3` est remplie.
+
+## L'instruction `continue`
+
+Le mot-clé `continue` est utilisé pour sauter l'itération en cours d'une boucle et passer à l'itération suivante. Il peut être utilisé à l'intérieur d'une boucle `for` ou `while`.
+Il est souvent utilisé pour ignorer certaines conditions sans sortir de la boucle.
+
+### Avec `for` : [!toc]
+
+```python
+nombres = [1, 2, 3, 4, 5]
+
+for nombre in nombres:
+    if nombre == 3:
+        continue
+    print(nombre)
+
+# Output:
+# 1
+# 2
+# 4
+# 5
+```
+
+### Avec `while`: [!toc]
+
+```python
+compteur = 0
+
+while compteur < 5:
+    compteur += 1
+    if compteur == 3:
+        continue
+    print(compteur)
+# Output:
+# 1
+# 2
+# 4
+# 5
+```
+
+Dans ces exemples, lorsque la condition `nombre == 3` ou `compteur == 3` est remplie, l'itération en cours est ignorée et la boucle passe à l'itération suivante.
+
+## L'instruction `else` avec les boucles
+
+Il est possible d'utiliser l'instruction `else` avec les boucles `for` et `while`. Le bloc de code associé à l'instruction `else` sera exécuté lorsque la boucle se termine normalement (c'est-à-dire sans rencontrer un `break`).
+
+### Avec `for` : [!toc]
+
+```python
+nombres = [1, 2, 3]
+
+for nombre in nombres:
+    print(nombre)
+else:
+    print("Boucle terminée")
+
+# Output:
+# 1
+# 2
+# 3
+# Boucle terminée
+```
+
+### Avec `while` : [!toc]
+
+```python
+compteur = 0
+
+while compteur < 3:
+    print(compteur)
+    compteur += 1
+else:
+    print("Boucle terminée")
+
+# Output:
+# 0
+# 1
+# 2
+# Boucle terminée
+```
+
+Dans ces exemples, le bloc de code associé à l'instruction `else` est exécuté après la fin de la boucle, indiquant que la boucle s'est terminée normalement.

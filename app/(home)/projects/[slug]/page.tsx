@@ -3,6 +3,8 @@ import Link from "next/link"
 import { InlineTOC } from "fumadocs-ui/components/inline-toc"
 import defaultMdxComponents from "fumadocs-ui/mdx"
 import { projects } from "@/lib/source"
+import Image from "next/image"
+import { ArrowLeft } from "lucide-react"
 
 export async function generateMetadata(props: {
   params: Promise<{ slug: string }>
@@ -29,12 +31,21 @@ export default async function Page(props: {
 
   return (
     <>
-      <div className="container rounded-xl border py-12 md:px-8">
+      <div className="container rounded-xl border my-6 md:py-8 md:px-8">
+        <Image
+          src={page.data.image || "/default-project.png"}
+          alt={page.data.title}
+          width={100}
+          height={100}
+          className="w-full h-72 object-cover mb-6"
+        />
         <h1 className="mb-2 text-3xl font-bold">{page.data.title}</h1>
         <p className="mb-4 text-fd-muted-foreground">{page.data.description}</p>
-        <Link href="/blog">Back</Link>
+        <Link href="/projects">
+          <ArrowLeft className="inline" /> Retour
+        </Link>
       </div>
-      <article className="container flex flex-col px-4 py-8">
+      <article className="container flex flex-col px-4 py-4">
         <div className="prose min-w-0">
           <InlineTOC items={page.data.toc} />
           <Mdx components={defaultMdxComponents} />
